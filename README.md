@@ -517,8 +517,7 @@ Overall, this methodology ensured that insights were generated through a **disci
 
 > 📊 **Sales Performance Analysis — SQL Insights + BI Visuals**
 
-This section summarizes overall ecommerce performance using SQL-driven metrics and Tableau / Power BI visual analytics.
-
+This section summarizes overall ecommerce performance using SQL-driven metrics and Tableau / Power BI visual analytics.  
 The analysis covers platform scale, revenue performance, product contribution, and monthly revenue trends.
 
 ---
@@ -544,14 +543,12 @@ SELECT
 
 ---
 
-### 🟡 Query 2 — Total Revenue, Orders & Average Order Value (AOV)
+### 🟡 Query 2 — Total Revenue, Orders & AOV
 
 **Purpose** — Measure overall financial performance.
 
 **Business Question**  
 What is the total revenue generated, transaction volume, and average order spend?
-
-**SQL Logic Used**
 
 ```sql
 SELECT 
@@ -562,18 +559,13 @@ FROM dbo.sales;
 ```
 
 **Visualization — Executive KPI Dashboard**  
-👉 *(insert tiles: Total Revenue • AOV • Total Orders)*
+👉 *(insert KPI tiles: Total Revenue • AOV • Total Orders)*
 
 ---
 
 ### 🟡 Query 3 — Revenue & AOV by Product Category
 
 **Purpose** — Identify commercial contribution by product segment.
-
-**Business Question**  
-Which product categories drive the highest revenue, order volume, and spending power?
-
-**SQL Logic Used**
 
 ```sql
 SELECT 
@@ -589,18 +581,13 @@ ORDER BY revenue DESC;
 ```
 
 **Visualization — Revenue & Orders by Category**  
-👉 *(insert bar / combo visual — Revenue • Orders • AOV)*
+👉 *(insert revenue + AOV category chart)*
 
 ---
 
 ### 🟡 Query 4 — Monthly Revenue Trend (Time Series)
 
-**Purpose** — Track revenue cycles and seasonal demand trends.
-
-**Business Question**  
-How does revenue trend change month-to-month across 2021–2025?
-
-**SQL Logic Used**
+**Purpose** — Track revenue cycles and seasonality trends.
 
 ```sql
 SELECT 
@@ -613,19 +600,18 @@ GROUP BY [Year], [Month]
 ORDER BY [Year], [Month];
 ```
 
-**Visualization — Monthly Revenue Trend (Time Series)**  
-👉 *(insert area / line time-series chart)*
+**Visualization — Monthly Revenue Trend**  
+👉 *(insert time-series chart visual)*
 
 ---
 
-### 🧠 Key Sales Insights
+### 🧠 Key Insights
 
-- Platform processes **~220K transactions across ~5K customers**
-- Total lifetime revenue exceeds **$281M+**
-- Electronics leads in **revenue & AOV strength**
-- Sports & Fashion show **high order volume segments**
-- Revenue follows **strong seasonal cycles**
-- 2025 reflects early slowdown signals
+- ~220K orders across ~5K customers  
+- Total lifetime revenue: **$281M+**  
+- Electronics drives highest revenue + AOV  
+- Sports & Fashion dominate order volume  
+- Revenue follows clear seasonal cycles  
+- 2025 indicates demand slowdown signals  
 
 </div>
-
