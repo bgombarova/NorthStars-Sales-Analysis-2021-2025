@@ -753,7 +753,7 @@ ORDER BY cohort_year, cohort_month;
 
 Visualization — Customer Acquisition Cohort Trend
 
-<p align="center"> <img src="BI_Visuals/Customer%20Acquisition%20Cohort%20(First%20Purchase%20Month).png" width="92%"> </p>
+<p align="center"> <img src="BI_Visuals/Customer%20Acquisition%20Cohort%20Trend.png" width="92%"> </p>
 
 ### 🟡 Query 18 — Churn Proxy — Customers Inactive > 365 Days
 
