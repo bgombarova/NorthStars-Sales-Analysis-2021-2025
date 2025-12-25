@@ -888,44 +888,27 @@ Visualization — Return Rate & Financial Loss Impact
 <p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level%20Chart.png" width="92%"> </p>
 
 
-<p align="center"> <img src="BI_Visuals/High%20Loss%20Return%20Orders.png" width="92%"> </p>
-
 ### **Product Performance — Key Insights (Evidence-Based)**
 
-Beauty and Sports are the strongest profit drivers in the portfolio
-Beauty records the highest gross margin at 36.24%, followed by Sports at 30.96%, indicating both categories run on premium pricing with efficient cost structures.
+-Beauty is the most profitable category
+Highest margin 36.24%, but also among the highest return exposure (13%+) — indicates premium positioning but post-purchase dissatisfaction risk.
 
-Electronics delivers strong commercial value but is promotion-dependent
-Electronics maintains a 25.68% margin while also accounting for a large share of discounted orders (66%), confirming revenue strength is supported by campaigns rather than purely organic demand.
+-Sports delivers strong unit economics
+High profit margin 30.96% with low return rate (~3–4%) — strongest risk-adjusted profitability contributor.
 
-Food is the weakest financial performer in the portfolio
-Food shows a margin of only 4.38%, significantly below all other categories — signalling price compression, operational inefficiency, or cost leakage across fulfillment and logistics.
+-Electronics is high-revenue but discount-dependent
+Margin 25.68% while 66% of orders are discounted, meaning revenue strength is promotion-driven rather than organic demand.
 
-Returns are heavily concentrated in Beauty and Books segments
-Both categories show return rates above 13%, compared to the portfolio baseline (~3–4%), resulting in higher refund exposure and financial loss concentration in a small product subset.
+-Food is the weakest financial performer
+Lowest margin 4.38% — signals price compression, high cost base, or operational inefficiency.
 
-Sports, Fashion, and Toys function as high-volume growth engines
-These categories generate the highest order throughput while maintaining moderate return risk, indicating strong customer demand and stable transactional performance.
+-Returns are concentrated in Beauty & Books
+Both categories report >13% return rate vs portfolio baseline (~3–4%) — creates disproportionate refund and loss impact.
 
-Two-thirds of all orders are driven by discount-led purchasing behavior
-Discounted transactions represent 66% of total orders, confirming that demand is highly price-elastic and that performance is strongly influenced by promotional programs.
+-Fashion, Toys & Sports act as volume engines
+High order throughput with stable return risk, supporting scale and transaction growth.
 
-Return-loss exposure is not volume-driven, but category-specific
-Despite similar order volumes across segments, refund losses are disproportionately higher in
-Books → Beauty → Electronics, suggesting:
-
-product quality / expectations gap
-
-supplier or packaging variation risk
-
-mismatch between buyer intent and delivered value
-
-Portfolio performance reflects a dual-value structure
-
-Value pillar 1 — High-margin premium products: Beauty, Sports, Electronics
-
-Value pillar 2 — High-volume throughput categories: Fashion, Sports, Toys
-
-This indicates a balanced but discount-sensitive product ecosystem, where profitability strength is offset by promotional dependency and concentrated return exposure.
+-Demand is highly price-elastic
+66% of total orders are discount-led, confirming performance is promotion-sensitive across most categories.
 
 </div>
