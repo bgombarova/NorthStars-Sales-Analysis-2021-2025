@@ -672,8 +672,8 @@ OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY;
 
 Visualization — Top Revenue Customers 
 <p align="center"> <img src="BI_Visuals/Top%2020%20Customers%20Revenue.png" width="92%"> </p>
-
-🟡 Query 6 — Repeat Purchase Frequency Buckets
+--
+### 🟡 Query 6 — Repeat Purchase Frequency Buckets
 
 **Purpose** — Segment customers based on repeat purchase strength.
 
@@ -695,7 +695,7 @@ FROM c;
 Visualization — Purchase Frequency Distribution
 
 <p align="center"> <img src="BI_Visuals/Customer%20Purchase%20Frequency%20Buckets.png" width="92%"> </p>
-🟡 Query 7 — RFM Snapshot (Recency, Frequency, Monetary)
+### 🟡 Query 7 — RFM Snapshot (Recency, Frequency, Monetary)
 
 **Purpose** — Assess how recently and how often customers purchase, and how much they spend.
 
@@ -723,7 +723,7 @@ ORDER BY monetary DESC;
 Visualization — RFM Distribution Map
 
 <p align="center"> <img src="BI_Visuals/RFM%20Recency%20Frequency%20Monetary.png" width="92%"> </p>
-🟡 Query 8 — Customer Acquisition Cohort (First Purchase Month)
+### 🟡 Query 8 — Customer Acquisition Cohort (First Purchase Month)
 
 **Purpose** — Analyze customer onboarding trend across time.
 
