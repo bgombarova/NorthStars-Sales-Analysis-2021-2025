@@ -71,3 +71,54 @@ To address these challenges, this project applies a structured, data-driven anal
 ---
 >
 
+---
+
+<table width="90%" align="center">
+<tr><td>
+
+### 🎯 **Objectives and Research Goals**
+
+The primary objective of this project is to evaluate the historical performance of a US-based ecommerce business and generate data-driven insights that support strategic decision-making across revenue growth, profitability, customer retention, and operational efficiency.
+
+The analysis is designed to answer key business questions across the following domains:
+
+**1️⃣ Sales & Revenue Performance**
+- How have revenue, order volume, and AOV changed over time?
+- Which months, seasons, or years exhibit strong or weak performance trends?
+
+**2️⃣ Customer Engagement & Retention**
+- Which customers generate the highest lifetime revenue?
+- What proportion of customers are repeat vs. one-time buyers?
+- Are there signs of churn based on inactivity duration?
+
+**3️⃣ Product & Category Profitability**
+- Which product categories contribute the most revenue and gross profit?
+- Which categories have lower margins or higher refund exposure?
+
+**4️⃣ Discount & Pricing Impact**
+- How do discounted orders compare to non-discounted orders?
+- Does discounting increase order frequency or reduce profitability?
+
+**5️⃣ Returns & Operational Risk**
+- What is the overall return rate and financial loss due to returns?
+- Do slower deliveries increase return likelihood?
+
+**6️⃣ Logistics & Delivery Performance**
+- Which delivery speed categories perform best?
+- How delivery delays impact customer behavior and satisfaction?
+
+**7️⃣ Geographic Market Insights**
+- Which states generate the highest order volume and revenue?
+- Which locations show higher return or delivery issue risk?
+
+The research goal is to transform raw transactional data into actionable insights that help leadership strengthen:
+
+- pricing and promotion strategy  
+- retention and loyalty programs  
+- fulfillment and delivery performance  
+- revenue growth and profitability optimization  
+
+</td></tr>
+</table>
+
+---
