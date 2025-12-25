@@ -332,7 +332,7 @@ This project was implemented using a modern analytics technology stack combining
 - Applied business logic transformations across customer, product, and sales datasets  
 - Powered analytical queries used for insight generation and reporting
 
-** Microsoft Excel**
+**Microsoft Excel**
 - Used during preprocessing and file structuring  
 - Source for base “Sales Master” dataset and CSV extraction files  
 - Assisted with result validation, summary exports, and supporting tables
