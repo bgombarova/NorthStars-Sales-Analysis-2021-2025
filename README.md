@@ -620,7 +620,7 @@ ORDER BY [Year], [Month];
 BI_Visuals/Sales%20Time%20Series.png
 ---
 
-###Sales Performance — Key Insights (Evidence-Based)
+### **Sales Performance — Key Insights (Evidence-Based)
 
 -Total recorded revenue is approximately $281.5M.
 Revenue peaks in 2023, followed by a gradual decline in 2024–2025, indicating a post-growth normalization period.
