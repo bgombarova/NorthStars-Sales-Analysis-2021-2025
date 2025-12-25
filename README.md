@@ -646,7 +646,7 @@ This confirms performance impact is volume-driven, not caused by discount erosio
 ---
 
 
->## **Customer Behavior & Retention Analytics — SQL Insights + BI Visuals**
+>### **Customer Behavior & Retention Analytics — SQL Insights + BI Visuals**
 
 This section analyzes how customers behave across lifetime value, repeat purchase frequency, recency, churn risk, and acquisition cohorts.  
 The objective is to understand **customer retention strength, spending concentration, and lifecycle purchase behavior**.
@@ -788,11 +788,17 @@ Some high-value customers show recency gaps exceeding 90–120+ days, highlighti
 > <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 
-> ### **Product Performance & Profitability Analysis**
+---
+
+
+> ###   **Product Performance & Profitability Analysis**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 This section analyzes product-level commercial performance, including profitability, discount dependency, and financial exposure from returns.
 Insights are derived using SQL queries and validated through Power BI visual analytics.
+
+
+---
 
 ### 🟡 Query 9 — Profitability by Product Category (Gross Profit & Margin%)
 
