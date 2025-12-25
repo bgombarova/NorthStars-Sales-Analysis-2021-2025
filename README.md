@@ -11,7 +11,7 @@ This project presents an end-to-end analytics study of a **US-based ecommerce co
 The company serves a nationwide customer base and processes sales activity across multiple product categories and channels. The dataset includes approximately:
 
 - **50,00+ unique customers**
-- **100,000+ historical transactions**
+- **220,000+ historical transactions**
 - **$281M+ in recorded sales revenue**
 - **Multiple sales and fulfillment channels**
 - **Delivery time, returns, discounting & behavioral attributes**
