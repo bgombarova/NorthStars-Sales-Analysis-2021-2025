@@ -726,7 +726,7 @@ ORDER BY monetary DESC;
 
 Visualization — RFM Distribution Map
 
-<p align="center"> <img src="Recency, Frequency, Monetary" width="92%"> </p>
+<p align="center"> <img src="BI_Visuals/Recency%2C%20Frequency%2C%20Monetary.png" width="92%"> </p>
 
 ### 🟡 Query 8 — Customer Acquisition Cohort (First Purchase Month)
 
