@@ -516,7 +516,7 @@ Overall, this methodology ensured that insights were generated through a **disci
 > <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 
-> 📊 **Sales Performance Analysis — SQL Insights + BI Visuals**
+> ### **Sales Performance Analysis — SQL Insights + BI Visuals**
 
 This section summarizes overall ecommerce performance using SQL-driven metrics and Tableau / Power BI visual analytics.  
 The analysis covers platform scale, revenue performance, product contribution, and monthly revenue trends.
