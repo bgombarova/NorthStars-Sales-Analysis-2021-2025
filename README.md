@@ -133,7 +133,7 @@ The dataset contains multi-year ecommerce transaction records and supporting dim
 
 The analytical model consists of the following core datasets:
 
-** Customers (Dimension Table)**
+**Customers (Dimension Table)**
 - 5,000+ unique customers
 - Geographic attributes including state and city
 - Purchasing frequency and engagement characteristics
@@ -142,7 +142,7 @@ The analytical model consists of the following core datasets:
 - 8+ product categories
 - Category-level performance & profitability context
 
-** Sales Transactions (Fact Table)**
+**Sales Transactions (Fact Table)**
 - 220,000+ transaction records
 - Order ID, order date, quantity and revenue
 - Total amount & discount amount
@@ -151,14 +151,14 @@ The analytical model consists of the following core datasets:
 - Return flag & financial return loss
 - Behavioral attributes such as session duration
 
-** Geographic Coverage**
+**Geographic Coverage**
 - Orders generated across **7+ US states**
 
-** Time Coverage**
+**Time Coverage**
 - Historical period: **2021 – 2025**
 - Monthly and yearly aggregation supported
 
-** Business Scale Summary**
+**Business Scale Summary**
 - 220,000+ sales records
 - 5,000+ customers
 - **$281M+ total recorded revenue**
