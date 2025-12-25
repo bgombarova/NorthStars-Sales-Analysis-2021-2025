@@ -643,6 +643,8 @@ This confirms performance impact is volume-driven, not caused by discount erosio
 </div>
 
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
+---
+
 
 >## **Customer Behavior & Retention Analytics — SQL Insights + BI Visuals**
 
