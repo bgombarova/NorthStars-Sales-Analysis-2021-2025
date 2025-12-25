@@ -513,13 +513,7 @@ Overall, this methodology ensured that insights were generated through a **disci
 </td></tr>
 </table>
 
-<table width="90%" align="center">
-<tr><td>
-
-
-> 📊 **Sales Performance Analysis**
-
-<div style="border:1px solid #d9d9d9; padding:16px; border-radius:6px; background:#fafafa;">
+<div style="border:1px solid #d3d3d3; padding:18px; border-radius:6px; background:#fafafa; margin-top:8px;">
 
 ### 🟡 Query 1 — Monthly Revenue Trend (Time Series)
 
@@ -540,19 +534,19 @@ ORDER BY Order_Date;
 ```
 
 **SQL Output (Table Preview)**  
-👉 *(table screenshot goes here)*
+👉 *(insert screenshot here)*
 
 **Visualization — Revenue Time Series**  
 👉 *(insert chart image here)*
 
 ---
 
-### 🟡 Query 2 — Portfolio KPIs (Revenue, Orders & AOV)
+### 🟡 Query 2 — Portfolio KPIs (Revenue, Orders, AOV)
 
-**Purpose** — Compute top-level ecommerce performance indicators.
+**Purpose** — Compute overall ecommerce performance metrics.
 
 **Business Question**  
-What is the overall sales volume and customer spending behavior?
+What is the total revenue, total orders, and average order value?
 
 **SQL Query**
 
@@ -565,19 +559,19 @@ FROM dbo.sales;
 ```
 
 **SQL Output (KPI Table)**  
-👉 *(table screenshot here)*
+👉 *(insert screenshot here)*
 
-**Dashboard KPI Tiles (Power BI / Tableau)**  
-👉 *(KPI visuals image here)*
+**Dashboard KPI Tiles (Tableau / Power BI)**  
+👉 *(insert KPI image here)*
 
 ---
 
 ### 🟡 Query 3 — Revenue by Product Category
 
-**Purpose** — Identify top-revenue and low-revenue categories.
+**Purpose** — Identify highest and lowest revenue-generating categories.
 
 **Business Question**  
-Which product categories contribute the most to total sales revenue?
+Which categories contribute the most to total revenue?
 
 **SQL Query**
 
@@ -591,19 +585,19 @@ ORDER BY revenue DESC;
 ```
 
 **SQL Output (Table Preview)**  
-👉 *(table screenshot here)*
+👉 *(insert screenshot here)*
 
 **Visualization — Revenue Contribution by Category**  
-👉 *(bar chart image here)*
+👉 *(insert bar chart image here)*
 
 ---
 
 ### 🟡 Query 4 — Orders & AOV by Product Category
 
-**Purpose** — Compare order volume vs. purchasing power across categories.
+**Purpose** — Compare order volume versus spending power.
 
 **Business Question**  
-Do categories with high sales volume also generate higher AOV?
+Do high-volume categories also generate high AOV?
 
 **SQL Query**
 
@@ -618,24 +612,10 @@ ORDER BY orders DESC;
 ```
 
 **SQL Output (Table Preview)**  
-👉 *(table screenshot here)*
+👉 *(insert screenshot here)*
 
 **Visualization — Orders vs AOV by Category**  
-👉 *(combo chart image here)*
+👉 *(insert combo-chart image here)*
 
 </div>
-
----
-
-### 🧠 Sales Performance — Key Insights
-
-- Electronics is the highest-revenue category across the portfolio  
-- Order volume peaks during seasonal cycles (holiday periods)  
-- Sports & Fashion have high order counts but moderate AOV  
-- 2023 shows the strongest revenue and order growth year  
-- 2025 indicates a demand slowdown across segments  
-
----
-
-</td></tr>
-</table>
+>
