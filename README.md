@@ -614,8 +614,10 @@ ORDER BY [Year], [Month];
 ```
 
 **Visualization — Monthly Revenue Trend**  
-👉 *(insert time-series chart visual)*
-
+<p align="center">
+  <img src="BI_Visuals/Sales%20Time%20Series.png" width="92%">
+</p
+BI_Visuals/Sales%20Time%20Series.png
 ---
 
 ### 🧠 Sales Performance — Key Insights (Evidence-Based)
