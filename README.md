@@ -513,6 +513,9 @@ Overall, this methodology ensured that insights were generated through a **disci
 </td></tr>
 </table>
 
+<table width="90%" align="center">
+<tr><td>
+
 
 > 📊 **Sales Performance Analysis**
 
@@ -634,3 +637,5 @@ ORDER BY orders DESC;
 
 ---
 
+</td></tr>
+</table>
