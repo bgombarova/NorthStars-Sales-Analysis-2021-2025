@@ -561,7 +561,9 @@ FROM dbo.sales;
 ```
 
 **Visualization — Executive KPI Dashboard**  
-👉 *(insert KPI tiles: Total Revenue • AOV • Total Orders)*
+<p align="center">
+  <img src="BI_Visuals/Revenue%20KPI.png" width="92%">
+</p>
 
 ---
 
