@@ -42,9 +42,9 @@ Insights from this study are intended to support business leaders and operationa
 <table width="90%" align="center">
 <tr><td>
 
-### 📌 **Background and Problem Context**
+### **Background and Problem Context**
 
-The dataset represents operations from a **US-based Ecommerce Retail Company** that sells consumer products across multiple categories and fulfillment channels. Over recent years, the company has experienced rapid digital growth, increasing competition from peer retailers, evolving customer purchasing behavior, and operational challenges related to delivery performance and returns.
+The dataset represents operations from a **Ecommerce Retail Company** that sells consumer products across multiple categories and fulfillment channels. Over recent years, the company has experienced rapid digital growth, increasing competition from peer retailers, evolving customer purchasing behavior, and operational challenges related to delivery performance and returns.
 
 The business operates at national scale, serving a large and diverse customer base characterized by:
 
