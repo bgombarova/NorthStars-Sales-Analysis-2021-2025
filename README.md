@@ -541,7 +541,7 @@ SELECT
 
 **Visualization — Portfolio Summary KPIs**  
 <p align="center">
-  <img src="C:\Users\Umair Nawaz\downloads\query1.png" width="92%">
+  <img src="query1.png" width="92%">
 </p>
 ---
 
