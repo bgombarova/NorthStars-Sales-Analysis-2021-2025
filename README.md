@@ -39,21 +39,24 @@ Insights from this study are intended to support business leaders and operationa
 ---
 
 
-### **Background and Problem Context**
+<table width="90%" align="center">
+<tr><td>
 
-Given dataset represents operations from a **Ecommerce Retail Company** that sells consumer products across multiple categories and fulfillment channels. Over recent years, the company has experienced rapid digital growth, increasing competition from peer retailers, evolving customer purchasing behavior, and operational challenges related to delivery performance and returns.
+### 📌 **Background and Problem Context**
 
-The business operates at national scale, serving a large and diverse customer base with:
+The dataset represents operations from a **US-based Ecommerce Retail Company** that sells consumer products across multiple categories and fulfillment channels. Over recent years, the company has experienced rapid digital growth, increasing competition from peer retailers, evolving customer purchasing behavior, and operational challenges related to delivery performance and returns.
+
+The business operates at national scale, serving a large and diverse customer base characterized by:
 
 - high transaction volumes  
 - varying order frequency across customers  
 - mixed profitability across product categories  
 - seasonal fluctuations in demand  
-- discount-driven purchase behavior in certain segments  
+- discount-driven purchasing behavior in certain segments  
 
-While the organization generates substantial data across sales, customers, fulfillment, and behavioral interactions, leaders face several analytics and decision-making challenges, including:
+Despite having substantial data across sales, customers, fulfillment, and behavioral interactions, business leaders face several analytics and decision-making challenges, including:
 
-- limited visibility into **revenue and order performance trends** over time  
+- limited visibility into **revenue and order performance trends over time**  
 - difficulty identifying **profitable vs. low-margin product categories**  
 - uncertainty around the **financial impact of returns and refunds**  
 - lack of insight into **delivery delays and logistics bottlenecks**  
@@ -66,8 +69,5 @@ To address these challenges, this project applies a structured, data-driven anal
 </table>
 
 ---
+>
 
-</td></tr>
-</table>
-
----
