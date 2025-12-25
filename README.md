@@ -888,68 +888,44 @@ Visualization — Return Rate & Financial Loss Impact
 <p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level%20Chart.png" width="92%"> </p>
 
 
-### 🟡 Query 12 — High-Loss Return Orders (Exception Monitoring)
-
-**Purpose** — Identify extreme loss-impact cases for investigation.
-
-**Business Question** 
-Which individual orders account for the highest financial loss due to returns?
-```sql
-SELECT TOP(50) 
-  Order_ID,
-  Customer_ID,
-  Total_Amount,
-  Return_Loss
-FROM dbo.sales
-WHERE Return_Loss > 0
-ORDER BY Return_Loss DESC;
-```
-
-Visualization — High Loss Return Outliers (Risk Flags)
-
 <p align="center"> <img src="BI_Visuals/High%20Loss%20Return%20Orders.png" width="92%"> </p>
 
 ### **Product Performance — Key Insights (Evidence-Based)**
 
--Beauty and Sports are the most profitable categories.
-Beauty delivers the highest gross margin (36.24%), followed by Sports (30.96%), indicating strong premium pricing power and efficient cost structure.
+Beauty and Sports are the strongest profit drivers in the portfolio
+Beauty records the highest gross margin at 36.24%, followed by Sports at 30.96%, indicating both categories run on premium pricing with efficient cost structures.
 
--Electronics generates strong revenue but relies heavily on discounting
-Electronics shows solid profit margin (25.68%) but also has a high discounted-order dependency (66%), meaning performance is partially promotion-driven rather than organically demand-led.
+Electronics delivers strong commercial value but is promotion-dependent
+Electronics maintains a 25.68% margin while also accounting for a large share of discounted orders (66%), confirming revenue strength is supported by campaigns rather than purely organic demand.
 
--Food is the weakest-performing category financially
-Food records the lowest profit margin (4.38%), suggesting operational inefficiency, thin pricing, or cost leakage across logistics and fulfillment.
+Food is the weakest financial performer in the portfolio
+Food shows a margin of only 4.38%, significantly below all other categories — signalling price compression, operational inefficiency, or cost leakage across fulfillment and logistics.
 
--Books & Beauty experience significantly higher return rates
-Return rates exceed 13% in both categories, creating elevated refund exposure and avoidable financial leakage compared to other segments (≈3–4%).
+Returns are heavily concentrated in Beauty and Books segments
+Both categories show return rates above 13%, compared to the portfolio baseline (~3–4%), resulting in higher refund exposure and financial loss concentration in a small product subset.
 
--Sports and Fashion act as high-volume commercial engines
-These categories generate strong order throughput with moderate return risk and stable margins — supporting portfolio stability and baseline transaction flow.
+Sports, Fashion, and Toys function as high-volume growth engines
+These categories generate the highest order throughput while maintaining moderate return risk, indicating strong customer demand and stable transactional performance.
 
--Discount dependency is structurally high across the business
-~66% of total orders come from discounted purchases, signaling:
+Two-thirds of all orders are driven by discount-led purchasing behavior
+Discounted transactions represent 66% of total orders, confirming that demand is highly price-elastic and that performance is strongly influenced by promotional programs.
 
--revenue is promotion-sensitive
+Return-loss exposure is not volume-driven, but category-specific
+Despite similar order volumes across segments, refund losses are disproportionately higher in
+Books → Beauty → Electronics, suggesting:
 
--customer demand is price-elastic
+product quality / expectations gap
 
--long-term profitability may erode without discount control
+supplier or packaging variation risk
 
--Return losses are concentrated in a few product lines
-Books and Beauty contribute disproportionately to refund cost exposure, suggesting the need for:
+mismatch between buyer intent and delivered value
 
--product quality or sizing review
+Portfolio performance reflects a dual-value structure
 
--supplier performance assessment
+Value pillar 1 — High-margin premium products: Beauty, Sports, Electronics
 
--packaging & delivery handling checks
+Value pillar 2 — High-volume throughput categories: Fashion, Sports, Toys
 
--Portfolio performance is driven by two value pillars
-
--High-margin premium clusters → Beauty, Sports, Electronics
-
--High-volume throughput clusters → Fashion, Sports, Toys
-
--The mix indicates a balanced but discount-sensitive product ecosystem.
+This indicates a balanced but discount-sensitive product ecosystem, where profitability strength is offset by promotional dependency and concentrated return exposure.
 
 </div>
