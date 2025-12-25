@@ -541,7 +541,7 @@ SELECT
 
 **Visualization — Portfolio Summary KPIs**  
 <p align="center">
-  <img src="query1.png" width="92%">
+  <img src="BI_Visuals/Platform%20KPI.png" width="92%">
 </p>
 ---
 
