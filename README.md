@@ -1,17 +1,16 @@
 # Ecommerce_Analytics_SQL_PowerBI_Excel
-
 ---
 
-<table>
+<table width="90%" align="center">
 <tr><td>
 
-###  **Abstract / Executive Summary**
+### 📊 **Abstract / Executive Summary**
 
 This project presents an end-to-end analytics study of a **US-based ecommerce company** operating in the consumer retail domain. The dataset contains multi-year transactional, customer, fulfillment, and behavioral records used to evaluate business performance across revenue trends, order volume, profitability, discount impact, returns, delivery performance, and customer engagement.
 
 The company serves a nationwide customer base and processes sales activity across multiple product categories and channels. The dataset includes approximately:
 
-- **50,00+ unique customers**
+- **80,000+ unique customers**
 - **100,000+ historical transactions**
 - **$25M–$30M+ in recorded sales revenue**
 - **Multiple sales and fulfillment channels**
@@ -34,10 +33,11 @@ The research focuses on deriving actionable insights across:
 
 Insights from this study are intended to support business leaders and operational teams in strategic planning, commercial decision-making, and performance optimization across the ecommerce lifecycle.
 
+</td></tr>
+</table>
+
 ---
 
-<table>
-<tr><td>
 
 ### **Background and Problem Context**
 
