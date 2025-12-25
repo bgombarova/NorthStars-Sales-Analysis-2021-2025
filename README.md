@@ -363,3 +363,156 @@ Together, these tools formed an integrated workflow that supported:
 </table>
 
 ---
+
+---
+
+<table width="90%" align="center">
+<tr><td>
+
+### Methodology & Analytical Approach
+
+This project follows a structured, end-to-end analytics workflow covering dataset preparation, ETL validation, warehouse modeling, analytical querying, and BI-driven storytelling. The methodology ensures that all insights are generated from **clean, validated, and trustworthy data**.
+
+---
+
+####  Phase 1 — Data Preparation & Source Structuring
+
+The project began with a single **Sales Master File** (Excel source).  
+To support scalable analytics, the dataset was logically decomposed into:
+
+- **dim_customer.csv** — customer demographics & loyalty info  
+- **dim_product.csv** — product category reference table  
+- **fact_sales.csv** — transactional sales fact table  
+
+This separation enabled a **star-schema–ready structure** and improved referential integrity.
+
+Each file was designed to include only relevant business attributes to support downstream modeling.
+
+---
+
+####  Phase 2 — Staging Layer & Raw Data Ingestion
+
+A dedicated **staging schema (`stg`)** was created in SQL Server to safely load raw CSV files.
+
+- All fields were first ingested as `VARCHAR(MAX)`  
+- BULK INSERT was used with UTF-8 compatibility  
+- Error handling and ETL logging were implemented
+
+The staging layer allowed:
+
+- controlled ingestion  
+- repeatable re-runs  
+- isolation of raw data from production tables  
+
+This ensured that **no unvalidated data** entered the warehouse.
+
+---
+
+####  Phase 3 — Data Quality Validation & Cleansing
+
+A comprehensive validation framework was applied across staging tables, including:
+
+**Customer data checks**
+- missing / blank customer keys  
+- duplicate customer records  
+- loyalty tier distribution review  
+- gender & demographic consistency checks  
+
+**Product data checks**
+- missing / null product categories  
+- duplicate or malformed values  
+- distinct category verification  
+
+**Sales transaction controls**
+- missing Order_ID / Customer_ID keys  
+- invalid or non-parseable dates  
+- numeric field validation for price, quantity, totals  
+- formula validation for revenue computations  
+- identification of negative or zero amounts  
+
+Additional controls ensured:
+
+- financial consistency  
+- clean keys and foreign relationships  
+- safe handling of edge-case values  
+
+Only validated and corrected records proceeded to DW load.
+
+---
+
+####  Phase 4 — Warehouse Loading & Star-Schema Modeling
+
+Cleaned records were inserted into production tables:
+
+- **customers (Dimension)**
+- **product_category (Dimension)**
+- **sales (Fact Table)**
+
+Key business attributes included:
+
+- revenue, cost, gross profit & margin  
+- discount & markup impact  
+- delivery speed & return behavior  
+- customer activity & session metrics  
+- enriched calendar intelligence fields  
+
+Referential integrity was enforced via:
+
+- **FK_sales_customer**
+- **FK_sales_product_category**
+
+This ensured accurate one-to-many relationships across the model.
+
+---
+
+####  Phase 5 — Analytical Querying & KPI Computation
+
+T-SQL was used to compute:
+
+- revenue & order trends
+- product profitability & category margins
+- retention & returning-customer metrics
+- geographic & state-level performance
+- discount impact on conversion & AOV
+- delivery delays vs return risk
+- churn & behavioral indicators
+
+Queries were structured for:
+
+- repeatability  
+- performance efficiency  
+- analytical transparency  
+
+Intermediate outputs were validated in Excel where necessary.
+
+---
+
+####  Phase 6 — Visualization & Insight Storytelling
+
+Power BI was connected directly to the SQL warehouse to ensure:
+
+- live query execution  
+- reliable single-source-of-truth metrics  
+
+Dashboards were designed to highlight:
+
+- business-focused narratives  
+- operational risk indicators  
+- profitability opportunities  
+- retention & return exposure patterns  
+
+Visuals emphasized:
+
+- clarity
+- decision relevance
+- executive interpretability
+
+---
+
+Overall, this methodology ensured that insights were generated through a **disciplined, auditable, and enterprise-aligned analytics process**, rather than through simple reporting or ad-hoc querying.
+
+</td></tr>
+</table>
+
+---
+
