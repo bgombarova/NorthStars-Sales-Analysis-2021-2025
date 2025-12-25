@@ -515,8 +515,8 @@ Overall, this methodology ensured that insights were generated through a **disci
 
 
 
-<table style="width:100%; border:1px solid #d9d9d9; border-radius:6px; background:#fafafa;">
-<tr><td style="padding:16px;">
+<div style="width:100%; border:1px solid #d9d9d9; border-radius:6px; background:#fafafa; padding:16px;">
+
 
 > 📊 **Sales Performance Analysis — SQL Insights + BI Visuals**
 
@@ -617,6 +617,6 @@ ORDER BY [Year], [Month];
 - Revenue follows clear seasonal cycles  
 - 2025 indicates demand slowdown signals  
 
-</td></tr>
-</table>
+</div>
+
 
