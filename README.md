@@ -122,3 +122,60 @@ The research goal is to transform raw transactional data into actionable insight
 </table>
 
 ---
+
+
+<table width="90%" align="center">
+<tr><td>
+
+###  **Dataset Description**
+
+The dataset contains multi-year ecommerce transaction records and supporting dimensional attributes covering operations from **2021 to 2025**. The data was validated in Excel, staged in SQL Server through staging tables, transformed into production tables, and analyzed using SQL queries and Power BI visual dashboards.
+
+The analytical model consists of the following core datasets:
+
+** Customers (Dimension Table)**
+- 5,000+ unique customers
+- Geographic attributes including state and city
+- Purchasing frequency and engagement characteristics
+
+** Product & Category (Dimension Table)**
+- 8+ product categories
+- Category-level performance & profitability context
+
+** Sales Transactions (Fact Table)**
+- 220,000+ transaction records
+- Order ID, order date, quantity and revenue
+- Total amount & discount amount
+- Gross profit
+- Delivery time & delivery speed category
+- Return flag & financial return loss
+- Behavioral attributes such as session duration
+
+** Geographic Coverage**
+- Orders generated across **7+ US states**
+
+** Time Coverage**
+- Historical period: **2021 – 2025**
+- Monthly and yearly aggregation supported
+
+** Business Scale Summary**
+- 220,000+ sales records
+- 5,000+ customers
+- **$281M+ total recorded revenue**
+
+The structured schema enables analysis across:
+
+- sales and revenue performance over time  
+- purchasing behavior and repeat frequency  
+- product and category profitability  
+- discount and pricing effectiveness  
+- delivery performance and logistics speed  
+- return-risk and operational loss exposure  
+
+This curated dataset supports both **SQL-based analytical workflows** and **Power BI interactive dashboards** for executive-level decision-making.
+
+</td></tr>
+</table>
+
+---
+
