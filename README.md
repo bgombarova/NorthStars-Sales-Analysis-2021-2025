@@ -82,32 +82,32 @@ The primary objective of this project is to evaluate the historical performance 
 
 The analysis is designed to answer key business questions across the following domains:
 
-**1️⃣ Sales & Revenue Performance**
+**1- Sales & Revenue Performance**
 - How have revenue, order volume, and AOV changed over time?
 - Which months, seasons, or years exhibit strong or weak performance trends?
 
-**2️⃣ Customer Engagement & Retention**
+**2- Customer Engagement & Retention**
 - Which customers generate the highest lifetime revenue?
 - What proportion of customers are repeat vs. one-time buyers?
 - Are there signs of churn based on inactivity duration?
 
-**3️⃣ Product & Category Profitability**
+**3- Product & Category Profitability**
 - Which product categories contribute the most revenue and gross profit?
 - Which categories have lower margins or higher refund exposure?
 
-**4️⃣ Discount & Pricing Impact**
+**4- Discount & Pricing Impact**
 - How do discounted orders compare to non-discounted orders?
 - Does discounting increase order frequency or reduce profitability?
 
-**5️⃣ Returns & Operational Risk**
+**5- Returns & Operational Risk**
 - What is the overall return rate and financial loss due to returns?
 - Do slower deliveries increase return likelihood?
 
-**6️⃣ Logistics & Delivery Performance**
+**6- Logistics & Delivery Performance**
 - Which delivery speed categories perform best?
 - How delivery delays impact customer behavior and satisfaction?
 
-**7️⃣ Geographic Market Insights**
+**7- Geographic Market Insights**
 - Which states generate the highest order volume and revenue?
 - Which locations show higher return or delivery issue risk?
 
