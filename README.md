@@ -513,109 +513,119 @@ Overall, this methodology ensured that insights were generated through a **disci
 </td></tr>
 </table>
 
-<div style="border:1px solid #d3d3d3; padding:18px; border-radius:6px; background:#fafafa; margin-top:8px;">
+<div style="border:1px solid #bfbfbf; padding:18px; border-radius:6px; background:#ffffff;">
 
-### 🟡 Query 1 — Monthly Revenue Trend (Time Series)
+> 📊 **Sales Performance Analysis — SQL Insights + BI Visuals**
 
-**Purpose** — Analyze revenue trend over time to identify seasonality, growth cycles, and performance spikes.
+This section summarizes overall ecommerce performance using SQL-driven metrics and Tableau / Power BI visual analytics.
 
-**Business Question**  
-How has total revenue changed over time across the 2021–2025 period?
-
-**SQL Query**
-
-```sql
-SELECT 
-    CAST(Order_Date AS DATE) AS Order_Date,
-    SUM(Total_Amount) AS Revenue
-FROM dbo.sales
-GROUP BY CAST(Order_Date AS DATE)
-ORDER BY Order_Date;
-```
-
-**SQL Output (Table Preview)**  
-👉 *(insert screenshot here)*
-
-**Visualization — Revenue Time Series**  
-👉 *(insert chart image here)*
+The analysis covers platform scale, revenue performance, product contribution, and monthly revenue trends.
 
 ---
 
-### 🟡 Query 2 — Portfolio KPIs (Revenue, Orders, AOV)
+### 🟡 Query 1 — Platform Overview (Customers, Products, Orders)
 
-**Purpose** — Compute overall ecommerce performance metrics.
+**Purpose** — Understand business scale and dataset footprint.
 
 **Business Question**  
-What is the total revenue, total orders, and average order value?
+How many customers, product categories, and total sales transactions exist in the portfolio?
 
-**SQL Query**
+**SQL Logic Used**
 
 ```sql
 SELECT 
-    SUM(Total_Amount) AS total_revenue,
-    COUNT(*) AS total_orders,
-    CAST(SUM(Total_Amount) * 1.0 / COUNT(*) AS DECIMAL(10,2)) AS avg_order_value
+  (SELECT COUNT(*) FROM dbo.customers) AS customers_count,
+  (SELECT COUNT(*) FROM dbo.product_category) AS product_categories_count,
+  (SELECT COUNT(*) FROM dbo.sales) AS sales_count;
+```
+
+**Visualization — Portfolio Summary KPIs**  
+👉 *(insert KPI tiles: Customers • Product Categories • Total Orders)*
+
+---
+
+### 🟡 Query 2 — Total Revenue, Orders & Average Order Value (AOV)
+
+**Purpose** — Measure overall financial performance.
+
+**Business Question**  
+What is the total revenue generated, transaction volume, and average order spend?
+
+**SQL Logic Used**
+
+```sql
+SELECT 
+  SUM(Total_Amount) AS Total_revenue,
+  AVG(Total_Amount) AS Avg_order_value,
+  COUNT(*) AS orders
 FROM dbo.sales;
 ```
 
-**SQL Output (KPI Table)**  
-👉 *(insert screenshot here)*
-
-**Dashboard KPI Tiles (Tableau / Power BI)**  
-👉 *(insert KPI image here)*
+**Visualization — Executive KPI Dashboard**  
+👉 *(insert tiles: Total Revenue • AOV • Total Orders)*
 
 ---
 
-### 🟡 Query 3 — Revenue by Product Category
+### 🟡 Query 3 — Revenue & AOV by Product Category
 
-**Purpose** — Identify highest and lowest revenue-generating categories.
+**Purpose** — Identify commercial contribution by product segment.
 
 **Business Question**  
-Which categories contribute the most to total revenue?
+Which product categories drive the highest revenue, order volume, and spending power?
 
-**SQL Query**
+**SQL Logic Used**
 
 ```sql
 SELECT 
-    Product_Category,
-    SUM(Total_Amount) AS revenue
-FROM dbo.sales
-GROUP BY Product_Category
+    p.Product_Category, 
+    COUNT(*) AS orders,
+    SUM(s.Total_Amount) AS revenue,
+    AVG(s.Total_Amount) AS aov
+FROM dbo.sales s
+JOIN dbo.product_category p 
+    ON s.Product_Category = p.Product_Category
+GROUP BY p.Product_Category
 ORDER BY revenue DESC;
 ```
 
-**SQL Output (Table Preview)**  
-👉 *(insert screenshot here)*
-
-**Visualization — Revenue Contribution by Category**  
-👉 *(insert bar chart image here)*
+**Visualization — Revenue & Orders by Category**  
+👉 *(insert bar / combo visual — Revenue • Orders • AOV)*
 
 ---
 
-### 🟡 Query 4 — Orders & AOV by Product Category
+### 🟡 Query 4 — Monthly Revenue Trend (Time Series)
 
-**Purpose** — Compare order volume versus spending power.
+**Purpose** — Track revenue cycles and seasonal demand trends.
 
 **Business Question**  
-Do high-volume categories also generate high AOV?
+How does revenue trend change month-to-month across 2021–2025?
 
-**SQL Query**
+**SQL Logic Used**
 
 ```sql
 SELECT 
-    Product_Category,
-    COUNT(*) AS orders,
-    CAST(AVG(Total_Amount) AS DECIMAL(10,2)) AS avg_order_value
+    [Year], 
+    [Month], 
+    CONCAT([Year], '-', RIGHT('0'+CAST([Month] AS VARCHAR(2)),2)) AS year_month,
+    SUM(Total_Amount) AS revenue
 FROM dbo.sales
-GROUP BY Product_Category
-ORDER BY orders DESC;
+GROUP BY [Year], [Month]
+ORDER BY [Year], [Month];
 ```
 
-**SQL Output (Table Preview)**  
-👉 *(insert screenshot here)*
+**Visualization — Monthly Revenue Trend (Time Series)**  
+👉 *(insert area / line time-series chart)*
 
-**Visualization — Orders vs AOV by Category**  
-👉 *(insert combo-chart image here)*
+---
+
+### 🧠 Key Sales Insights
+
+- Platform processes **~220K transactions across ~5K customers**
+- Total lifetime revenue exceeds **$281M+**
+- Electronics leads in **revenue & AOV strength**
+- Sports & Fashion show **high order volume segments**
+- Revenue follows **strong seasonal cycles**
+- 2025 reflects early slowdown signals
 
 </div>
->
+
