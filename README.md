@@ -5,13 +5,13 @@
 <table>
 <tr><td>
 
-### 📊 **Abstract / Executive Summary**
+###  **Abstract / Executive Summary**
 
 This project presents an end-to-end analytics study of a **US-based ecommerce company** operating in the consumer retail domain. The dataset contains multi-year transactional, customer, fulfillment, and behavioral records used to evaluate business performance across revenue trends, order volume, profitability, discount impact, returns, delivery performance, and customer engagement.
 
 The company serves a nationwide customer base and processes sales activity across multiple product categories and channels. The dataset includes approximately:
 
-- **80,000+ unique customers**
+- **50,00+ unique customers**
 - **100,000+ historical transactions**
 - **$25M–$30M+ in recorded sales revenue**
 - **Multiple sales and fulfillment channels**
