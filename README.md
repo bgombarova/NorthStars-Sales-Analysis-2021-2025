@@ -642,4 +642,140 @@ This confirms performance impact is volume-driven, not caused by discount erosio
 
 </div>
 
+div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
+
+## **Customer Behavior & Retention Analytics — SQL Insights + BI Visuals**
+
+This section analyzes how customers behave across lifetime value, purchase frequency, recency, churn risk, and acquisition cohorts.  
+The objective is to understand **repeat purchase strength, retention health, and monetary contribution of key customers**.
+
+---
+
+### 🟡 Query 5 — Top 20 Customers by Lifetime Revenue
+
+**Purpose** — Identify high-value customers driving major revenue share.
+
+**Business Question**  
+Which customers contribute the highest lifetime sales value?
+
+```sql
+SELECT 
+    s.Customer_ID,
+    SUM(s.Total_Amount) AS lifetime_revenue,
+    COUNT(*) AS orders,
+    AVG(s.Total_Amount) AS avg_order_value
+FROM dbo.sales s
+GROUP BY s.Customer_ID
+ORDER BY lifetime_revenue DESC
+OFFSET 0 ROWS FETCH NEXT 20 ROWS ONLY;
+Visualization — Top Revenue Customers (Pareto View)
+
+<p align="center"> <img src="BI_Visuals/Top%2020%20Customers%20Revenue.png" width="92%"> </p>
+🟡 Query 6 — Repeat Purchase Frequency Buckets
+Purpose — Segment customers by purchasing behavior.
+
+Business Question
+How many customers purchase rarely, occasionally, or frequently?
+
+sql
+Copy code
+WITH c AS (
+    SELECT Customer_ID, COUNT(*) AS orders
+    FROM dbo.sales
+    GROUP BY Customer_ID
+)
+SELECT 
+    SUM(CASE WHEN orders BETWEEN 1 AND 5 THEN 1 ELSE 0 END) AS low_freq_customers,
+    SUM(CASE WHEN orders BETWEEN 6 AND 20 THEN 1 ELSE 0 END) AS medium_freq_customers,
+    SUM(CASE WHEN orders > 20 THEN 1 ELSE 0 END) AS high_freq_customers
+FROM c;
+Visualization — Purchase Frequency Distribution
+
+<p align="center"> <img src="BI_Visuals/Customer%20Purchase%20Frequency%20Buckets.png" width="92%"> </p>
+🟡 Query 7 — RFM Snapshot (Recency, Frequency, Monetary)
+Purpose — Evaluate recency of last order and spending value.
+
+Business Question
+Which customers are recent active buyers vs dormant customers?
+
+sql
+Copy code
+WITH last AS (
+  SELECT 
+      Customer_ID,
+      MAX(Order_Date) AS last_order_date,
+      COUNT(*) AS frequency,
+      SUM(Total_Amount) AS monetary
+  FROM dbo.sales
+  GROUP BY Customer_ID
+)
+SELECT 
+    Customer_ID,
+    DATEDIFF(DAY, last_order_date, GETDATE()) AS recency_days,
+    frequency,
+    monetary
+FROM last
+ORDER BY monetary DESC;
+Visualization — RFM Distribution Map
+
+<p align="center"> <img src="BI_Visuals/RFM%20Recency%20Frequency%20Monetary.png" width="92%"> </p>
+🟡 Query 8 — New Customer Acquisition Cohort (First Purchase Month)
+Purpose — Identify growth period of new customer onboarding.
+
+Business Question
+How many customers joined in each cohort month?
+
+sql
+Copy code
+WITH first_buy AS (
+  SELECT 
+      Customer_ID, 
+      MIN(Order_Date) AS first_buy
+  FROM dbo.sales
+  GROUP BY Customer_ID
+)
+SELECT 
+    YEAR(first_buy) AS cohort_year, 
+    MONTH(first_buy) AS cohort_month, 
+    COUNT(*) AS new_customers
+FROM first_buy
+GROUP BY YEAR(first_buy), MONTH(first_buy)
+ORDER BY cohort_year, cohort_month;
+Visualization — Customer Acquisition Cohort Trend
+
+<p align="center"> <img src="BI_Visuals/Customer%20Cohort%20New%20Customers.png" width="92%"> </p>
+🟡 Query 18 — Churn Proxy — Customers Inactive > 365 Days
+Purpose — Identify customers who have likely churned.
+
+Business Question
+How many customers have not purchased in the last year?
+
+sql
+Copy code
+WITH last AS (
+  SELECT 
+      Customer_ID, 
+      MAX(Order_Date) AS last_order
+  FROM dbo.sales
+  GROUP BY Customer_ID
+)
+SELECT 
+    COUNT(*) AS customers_in_churn_window
+FROM last
+WHERE DATEDIFF(DAY, last_order, GETDATE()) > 365;
+Visualization — Inactive / Churn Risk Customers
+
+<p align="center"> <img src="BI_Visuals/Churn%20Risk%20Customers.png" width="92%"> </p>
+Customer Retention — Key Insights (Evidence-Based)
+A small group of high-value customers contributes a large share of revenue, confirming a Pareto-style revenue concentration pattern.
+
+Majority of users fall into the low-frequency purchase bucket (1–5 orders), while a smaller core segment repeats frequently.
+
+RFM results indicate a mix of recent active buyers and long-inactive dormant profiles, highlighting retention & win-back opportunities.
+
+Customer acquisition peaked in early periods (2021 cohorts), followed by gradual onboarding slowdown across later years.
+
+The churn proxy confirms a significant inactive base (>365 days), representing measurable revenue leakage risk and remarketing opportunity.
+
+</div> ```
 
