@@ -566,7 +566,7 @@ FROM dbo.sales;
 </p>
 
 <p align="center">
-  <img src="BI_Visuals/KPI%20Trend.png" width="92%">
+  <img src="BI_Visuals/KPI%20Trend%20Details.png" width="92%">
 </p
 
 ---
