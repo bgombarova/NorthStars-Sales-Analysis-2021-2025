@@ -847,7 +847,7 @@ GROUP BY CASE WHEN Discount_Amount > 0 THEN 'Discounted' ELSE 'Non-Discounted' E
 Visualization — Discounted vs Non-Discounted Order Performance
 
 <p align="center"> <img src="BI_Visuals/Discount%20Impact%20on%20Orders%20%26%20Revenue.png" width="92%"> </p>
-<p align="center"> <img src="BI_Visuals/Discount%20Impact%20on%20Orders%20(Pie%20Chart).png" width="92%"> </p>
+<p align="center"> <img src="BI_Visuals/Discount%20Impact%20on%20Orders%20%26%20Revenue%20Pie%20CHart%20Camparision.png" width="92%"> </p>
 
 
 ### 🟡 Query 11 — Returns & Loss Impact — Product Category Level
