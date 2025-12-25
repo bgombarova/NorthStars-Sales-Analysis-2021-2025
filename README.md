@@ -513,9 +513,10 @@ Overall, this methodology ensured that insights were generated through a **disci
 </td></tr>
 </table>
 
-<table width="100%" align="center">
-<tr><td>
 
+
+<table style="width:100%; border:1px solid #d9d9d9; border-radius:6px; background:#fafafa;">
+<tr><td style="padding:16px;">
 
 > 📊 **Sales Performance Analysis — SQL Insights + BI Visuals**
 
