@@ -179,3 +179,138 @@ This curated dataset supports both **SQL-based analytical workflows** and **Tabl
 
 ---
 
+<table width="90%" align="center">
+<tr><td>
+
+### **Data Architecture and ETL Workflow**
+
+This project follows a structured data-engineering workflow to ensure accuracy, reliability, and analytical readiness of the ecommerce dataset. The pipeline was designed using a **staging-to-production warehouse pattern**, with data validation checkpoints and referential-integrity controls.
+
+The end-to-end ETL workflow consists of the following stages:
+
+---
+
+#### **Step 1 — Source Data Preparation**
+
+The original dataset was provided as a consolidated **Sales Master Excel file**.  
+From this file, three domain-specific extract files were created to support dimensional modeling:
+
+- `dim_customer.csv`
+- `dim_product.csv`
+- `fact_sales.csv`
+
+Each CSV file contained only relevant attributes for its target table, ensuring clean separation of:
+
+- customer attributes
+- product category attributes
+- transactional sales facts
+
+---
+
+#### **Step 2 — Data Staging Layer (Raw Imports)**
+
+A dedicated SQL schema (`stg`) was created to store raw imported files.
+
+Staging tables were created with `VARCHAR(MAX)` data types to allow safe ingestion of:
+
+- malformed values
+- inconsistent text formats
+- unexpected special characters
+
+The following staging tables were implemented:
+
+- `stg.stg_dim_customer`
+- `stg.stg_dim_product`
+- `stg.stg_fact_sales`
+
+Bulk load operations were performed using `BULK INSERT`, with error handling and logging through an `etl_error_log` table.
+
+This ensured:
+
+- repeatable loading
+- transparent failure tracking
+- UTF-8 file support
+
+---
+
+#### **Step 3 — Data Quality & Validation Checks**
+
+Before transformation, multiple validation blocks were executed, including:
+
+- missing key detection (Order_ID, Customer_ID, Product_Category)
+- duplicate key identification
+- gender and loyalty tier distribution review
+- blank or null field checks
+- date parsing and invalid date detection
+- numeric field casting validation
+- negative and zero-value anomaly checks
+- revenue reconciliation totals
+
+Business-rule validation was also applied, including:
+
+- unit price × quantity − discount vs recorded total
+- checking rounding tolerances
+- confirming financial consistency across records
+
+This stage served as the **data reliability checkpoint** before promotion to production tables.
+
+---
+
+#### **Step 4 — Production Data Model (Cleaned Tables)**
+
+After validation, data was transformed, standardized, and loaded into structured production tables:
+
+- `dbo.customers` (Customer Dimension)
+- `dbo.product_category` (Product Dimension)
+- `dbo.sales` (Sales Fact Table)
+
+Transformations included:
+
+- text trimming & normalization
+- `TRY_CAST` conversion to numeric and date types
+- blank → NULL conversions
+- boolean field normalization
+- automatic date hierarchy derivation (Year, Month, Quarter, etc.)
+
+Only **cleaned and validated rows** were inserted.
+
+---
+
+#### **Step 5 — Referential Integrity & Warehouse Constraints**
+
+Foreign key relationships were enforced to maintain integrity:
+
+- `sales.Customer_ID` → `customers.Customer_ID`
+- `sales.Product_Category` → `product_category.Product_Category`
+
+This ensures:
+
+- no orphaned transaction records
+- consistent lookup relationships
+- trusted reporting outputs
+
+The final schema follows a **star-schema analytical design**, optimized for:
+
+- SQL analytical queries
+- business insight reporting
+- Power BI visualization
+
+---
+
+#### **Step 6 — Analytics & Reporting Layer**
+
+The cleaned production tables were connected to:
+
+- **Power BI** → for interactive dashboards and insights
+- (optionally) Tableau → for visual exploration and validation
+
+All SQL-based analysis queries were executed on the **production fact & dimension tables**, not on staging data — ensuring high-quality analytical outputs.
+
+---
+
+✔ This workflow delivers a robust, auditable, and enterprise-style ETL process designed for **data accuracy, performance reliability, and scalable analytics.**
+
+</td></tr>
+</table>
+
+---
