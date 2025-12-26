@@ -916,6 +916,8 @@ High order throughput with stable return risk, supporting scale and transaction 
 
 > <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
+> <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
+
 ## 📡 Channel & Engagement Performance — SQL Insights + BI Visuals
 
 This section analyzes how customers engage across  
@@ -963,6 +965,24 @@ ORDER BY CASE DayOfWeek
 
 ---
 
+### 🟡 Query 13 — Sales Channel Performance
+
+**Purpose** — Evaluate which channels contribute the most to revenue and order traffic.
+
+**Business Question**  
+Which sales channels generate the highest revenue, AOV, and order contribution?
+
+```sql
+SELECT 
+    Sales_Channel, 
+    COUNT(*) AS orders, 
+    SUM(Total_Amount) AS revenue, 
+    AVG(Total_Amount) AS aov
+FROM dbo.sales
+GROUP BY Sales_Channel
+ORDER BY revenue DESC;
+```
+
 **Visualization — Channel Contribution (Orders, Revenue, AOV)**
 
 <p align="center">
@@ -971,7 +991,7 @@ ORDER BY CASE DayOfWeek
 
 ---
 
-### 🟡 Query 13 — Device Type vs Engagement Quality
+### 🟡 Query 14 — Device Type vs Engagement Quality
 
 **Purpose** — Understand behavioral engagement differences across device platforms.
 
@@ -997,7 +1017,7 @@ ORDER BY orders DESC;
 
 ---
 
-### 🟡 Query 14 — Session Duration vs Order Value (Intent Signal)
+### 🟡 Query 15 — Session Duration vs Order Value (Intent Signal)
 
 **Purpose** — Analyze whether deeper browsing translates to higher spending.
 
@@ -1021,9 +1041,10 @@ ORDER BY CAST(Session_Duration_Minutes / 5 AS INT);
 
 ---
 
-## Channel & Engagement — Key Insights (Evidence-Backed)
+##  Channel & Engagement — Key Insights (Evidence-Backed)
 
-*----
+*(we will fill this after visuals are uploaded — like other sections)*
 
 </div>
+
 
