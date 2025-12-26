@@ -1037,18 +1037,35 @@ ORDER BY CAST(Session_Duration_Minutes / 5 AS INT);
 **Visualization — Session Duration vs AOV Trend**
 
 <p align="center">
-  <img src="BI_Visuals/Session%20Duration%20vs%20Order%20Value.png" width="92%">
-</p>
-
-<p align="center">
   <img src="BI_Visuals/Session%20Duration%20vs%20Order%20Value%20scatter%20plot.png" width="92%">
 </p>
 ---
 
 ##  Channel & Engagement — Key Insights (Evidence-Backed)
 
-*(we will fill this after visuals are uploaded — like other sections)*
+-Online & Mobile App channels dominate revenue contribution
+Online contributes $123.7M (highest revenue) followed by Mobile App at $100.6M — confirming that digital channels are the primary commercial drivers, while Retail Store and B2B remain secondary channels.
 
+-Strong multichannel demand but value concentration in digital
+Retail Store & B2B generate meaningful order volumes, however revenue contribution remains significantly lower — indicating lower-value or transactional purchase behavior in these channels.
+
+-Engagement is highest on Mobile devices despite similar session length
+Mobile users account for 114K+ orders compared to Desktop (74K) and Tablet (30K), even though session time averages ~14 mins across devices — suggesting higher conversion efficiency on Mobile.
+
+-Page-depth patterns indicate stronger browsing behavior on Mobile & Tablet
+Mobile & Tablet users average 9 pages/session vs 8 pages on Desktop, implying greater exploration behavior and potential cross-sell opportunities on mobile platforms.
+
+-Weekday demand remains stable with no significant drop-off risk
+Orders remain consistently distributed across days — Monday to Saturday average ~31K orders each, indicating predictable baseline demand and minimal weekday volatility.
+
+-Sunday shows slightly lower order volume but stable revenue
+Sunday orders dip modestly relative to weekdays, but revenue impact remains neutral — suggesting stable AOV rather than basket erosion.
+
+-Longer browsing sessions correlate with higher purchase value
+Session buckets 30–35 minutes show the highest AOV (~$1.5K+), confirming that higher engagement duration is linked with stronger purchase intent rather than casual browsing.
+
+-Extremely short & extremely long sessions indicate weak purchase intent
+Very short sessions (~0–5 mins) and very long sessions (~40+ mins) reflect lower AOV, likely representing bounce traffic and abandoned browsing rather than high-value activity.
 </div>
 
 
