@@ -596,6 +596,7 @@ ORDER BY revenue DESC;
 <p align="center">
   <img src="BI_Visuals/Order%20%2C%20AOV%20by%20Product%20Category.png" width="92%">
 </p
+ 
 ---
 
 ### 🟡 Query 4 — Monthly Revenue Trend (Time Series)
