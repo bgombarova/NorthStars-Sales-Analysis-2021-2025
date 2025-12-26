@@ -644,17 +644,14 @@ This confirms performance impact is volume-driven, not caused by discount erosio
 </div>
 
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
+ 
 ---
-
 
 >### **Customer Behavior & Retention Analytics — SQL Insights + BI Visuals**
 
 
----
-
 This section analyzes how customers behave across lifetime value, repeat purchase frequency, recency, churn risk, and acquisition cohorts.  
 The objective is to understand **customer retention strength, spending concentration, and lifecycle purchase behavior**.
-
 
 ---
 
