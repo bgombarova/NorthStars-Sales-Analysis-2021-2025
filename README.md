@@ -1210,9 +1210,9 @@ customer recovery workflows (refund credit / proactive outreach).
 ### **🌍 Geographic Performance Insights — SQL Analytics + BI Visuals**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
--- This section evaluates regional business performance using geography-level sales and profitability analytics.
+ This section evaluates regional business performance using geography-level sales and profitability analytics.
 
--- The objective is to understand state-level demand concentration, revenue contribution, and profit efficiency across operating regions.
+ The objective is to understand state-level demand concentration, revenue contribution, and profit efficiency across operating regions.
 
 ---
 
@@ -1239,11 +1239,11 @@ ORDER BY revenue DESC;
 
 Visualization — Geographic Revenue Distribution (State & City Level)
 
-<p align="center"> <img src="BI_Visuals/State_City_Revenue_Map.png" width="92%"> </p> <p align="center"> <img src="BI_Visuals/Top_Cities_Revenue_Ranking.png" width="92%"> </p>
+<p align="center"> <img src="BI_Visuals/State_City_Revenue_Map.png" width="92%"> </p> 
 
 ---
 
-🟡 Query 23 — Profit Margin Performance by State
+### 🟡 Query 23 — Profit Margin Performance by State
 
 **Purpose** — Assess geographic profitability and operating efficiency variation.
 
