@@ -1181,8 +1181,8 @@ Visualization — Delivery Time vs Orders Volume
 This suggests a strong dependency on express fulfillment capacity, which likely drives higher logistics cost exposure.
 
 **Deliveries exceeding 10 days form a visible long-tail risk segment**
-****34,122 (8–10 days) + 25,668 (11–15 days) + 8,252 (16–20 days) + 3,964 (20+ days)
-****→ **collectively 72,000+ delayed orders (~35% of total)**
+34,122 (8–10 days) + 25,668 (11–15 days) + 8,252 (16–20 days) + 3,964 (20+ days)
+→ **collectively 72,000+ delayed orders (~35% of total)**
 representing potential experience degradation & retention risk.
 
 **Slow deliveries show materially higher return probability**
