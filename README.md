@@ -1,4 +1,4 @@
-# Enterprise Commerce Analytics Platform — SQL , ETL & BI Insights
+# Ecommerce Analytics Platform — SQL , ETL & BI Insights
 ---
 
 <table width="90%" align="center">
