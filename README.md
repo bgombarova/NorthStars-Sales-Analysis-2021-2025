@@ -1,4 +1,4 @@
-# Ecommerce_Analytics_SQL_PowerBI_Excel
+# Enterprise Commerce Analytics Platform — SQL Data Warehouse, ETL & BI Insights
 ---
 
 <table width="90%" align="center">
