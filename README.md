@@ -1207,7 +1207,7 @@ customer recovery workflows (refund credit / proactive outreach).
 
 ---
 
-### ** Geographic Performance Insights**
+### **Geographic Performance Insights**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
  This section evaluates regional business performance using geography-level sales and profitability analytics.
