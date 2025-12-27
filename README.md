@@ -1306,133 +1306,164 @@ California (24.71%) and New York (24.75%) remain highly profitable despite volum
 </div>
 
 
+---
+
+<table width="90%" align="center">
+<tr><td>
+
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
-🟢 Portfolio Outcome Summary — Business Position & Strategic Actions
+📌 Final Project Conclusion — Portfolio Findings, Actions & Recommendations
+🧾 Summary of Analytical Findings (Evidence-Based, Technical)
 
-The 2021–2025 ecommerce portfolio reflects a mature, high-volume business generating ~$281.5M revenue across ~220K orders and ~5K customers. Growth accelerated through 2023, followed by volume normalization in 2024–25, while AOV remained stable (~$1.28K) — confirming that the decline is demand-frequency driven rather than pricing erosion.
+Across the 2021–2025 dataset, the ecommerce portfolio records:
 
-Revenue concentration is strongest in Electronics (~$135M) and in repeat high-frequency customers (>20 orders, ~3.9K users). Operational exposure is visible in delivery latency (7–15+ days) and high-return product cohorts (Beauty & Books, >13% return rate). Market performance is anchored in top metro cities (NYC, Chicago, LA, Atlanta), with Texas, Illinois, and Massachusetts emerging as high-margin states.
+~$281.5M total revenue | ~220K transactions | ~5K customers
 
-Overall, the business remains financially resilient, but requires targeted actions in retention, discount dependency, logistics risk, and city-focused expansion rather than broad-scale changes.
+AOV remains stable at ~$1.28K across all years
 
- ### **Business Priorities — What The Company Should Do Next**
-1 Strengthen Core Revenue Drivers (Do Not Dilute Premium Mix)
+Revenue peak occurs in 2023, followed by demand normalization in 2024–25
 
-Focus investment on segments proven to generate value:
+Volume decline is order-frequency driven (not pricing driven)
 
-Electronics + Sports = highest revenue + strong AOV
+Revenue concentration characteristics:
 
-High-frequency repeat customers = largest lifetime contribution
+Electronics contributes ~$135M (largest share + highest AOV)
 
-Top cities (NYC, Chicago, LA, Atlanta) = highest revenue penetration
+Sports, Fashion & Books → high order volume, moderate AOV
 
-Action Plan
-
-Launch Elite Loyalty / VIP Retention Program
-
-Priority perks for 20+ order customers (free shipping, early sale access)
-
-Personalized recommendation engine for premium categories
-
-Rationale: Retention upside is higher than new-customer acquisition ROI.
-
-2 Reduce Demand Slowdown Risk (Recover Order Frequency)
-
-Evidence shows:
-
-Order volume drops from 56K → 46K → 33K (2023→2025)
-
-AOV remains unchanged → slowdown = lower visit / repeat activity
-
-Action Plan
-
-Introduce win-back journeys for churn-risk cohorts (>365 days inactive)
-
-Stimulus campaigns focused on medium-frequency users (6–20 orders)
-
-Deploy engagement-based offers instead of blanket discounts
-
-Goal: Recover frequency without damaging price integrity.
-
-3 Optimize Discounts — Keep Them Strategic, Not Default
-
-Current state:
-
-66% of all orders come from discounted purchases
-
-But AOV stability confirms pricing power is still intact
-
-Action Plan
-
-Shift from site-wide discounts → targeted campaign triggers
-
-Reward bundles & category-specific offers
-
-Reduce discount exposure in high-return categories
-
-Outcome: Maintain growth while improving contribution margin.
-
-4 Fix Delivery-Driven CX & Returns Risk
+Repeat-purchase customers (>20 orders) → largest lifetime revenue share
 
 Operational risk signals:
 
-Slow deliveries (>10+ days) correlate with 6.8% return rate
+Slow delivery band (>10+ days) → return rate ~6.8%
 
-Fast / Medium delivery bands stay near ~2%
+Fast / Medium delivery → return rate ~2%
 
-Action Plan
+Highest return clusters → Beauty & Books (13–14%+)
 
-Prioritize 4–7 day window capacity, as it carries peak load
+Geographic performance highlights:
 
-Improve routing for 8–15 day zones
+Top revenue metros → NYC, Chicago, LA, Atlanta
 
-Tag SKUs with delivery-risk indicators
+Strong profit margin states → Texas, Illinois, Massachusetts
 
-Region Priority Focus
+Overall assessment:
 
-Delay clusters most visible in:
-Georgia, Colorado, Washington & extended-distance states
+Business is financially strong but constrained by
+retention frequency, logistics latency, and discount dependency.
 
-Expected Impact
+</td></tr>
+</table>
 
-Lower return leakage
+---
 
-Improved customer trust & retention
+ ### **Action Plan — Data-Driven Interventions (Prioritized)**
+##**Priority Area 1 — Retention & Frequency Recovery**
 
-5 Expand Strategically in High-Yield Markets
+**Observed Issue**
 
-Data confirms strongest commercial contribution from:
+Demand slowdown from 56K → 46K → 33K orders (2023→2025)
 
-NYC, Chicago, LA, Atlanta, Boston, San Francisco
+AOV stable → reduction caused by lower repeat engagement
 
-Texas & Illinois deliver high revenue + strong profit margin
+Actions
 
-Action Plan
+Identify churn-risk users >365 days inactive
 
-Expand local fulfillment footprint in top-performing metros
+Target medium-frequency cohort (6–20 orders) for recovery
 
-Prioritize inventory depth for high-margin states
+Deploy visit-triggered offers instead of blanket discounts
 
-Pilot city-specific demand acceleration campaigns
+Expected Outcome
 
-Outcome: Scales revenue while keeping fulfillment costs predictable.
+Increase order frequency without degrading pricing yield
 
-🟩 Final Conclusion — Execution Focus
+✅ Priority Area 2 — Logistics Risk & Return Leakage
 
-This portfolio demonstrates a business that:
+Observed Issue
 
-earns high, stable revenue quality
+Returns strongly associated with slow delivery (>10+ days)
 
-depends on repeat high-value customers
+Beauty & Books show highest return incidence
 
-is limited more by operational friction than market demand
+Actions
 
-The recommended transformation path is:
+Prioritize fulfillment routing for 4–7 day delivery window
 
- - Retain — not replace — core customers
- - Optimize promotions instead of increasing them
- - Fix delivery-latency risk before scaling volume
- - Grow in cities & states already proving profitable
+Isolate SKUs generating above-average return loss
 
-This shifts the organization from reactive decision-making toward a
-controlled, data-led growth strategy with measurable ROI outcomes.
+Introduce delivery-risk tagging in operational reports
+
+Expected Outcome
+
+Reduced return leakage + improved post-purchase experience
+
+✅ Priority Area 3 — Discount Optimization (Reduce Exposure)
+
+Observed Issue
+
+66% of orders occur under discounted pricing
+
+No material AOV erosion → indicates discount dependency
+
+Actions
+
+Shift to behavior-triggered discounting
+
+Remove discounts from high-return categories
+
+Introduce bundle uplift vs flat price cuts
+
+Expected Outcome
+
+Improve contribution margin without suppressing demand
+
+✅ Priority Area 4 — Geographic Growth Allocation
+
+Observed Insight
+
+Volume concentration in high-earning metros:
+
+NYC / Chicago / LA / Atlanta / Boston
+
+High-margin growth states:
+
+Texas / Illinois / Massachusetts
+
+Actions
+
+Increase inventory depth in high-yield zones
+
+Localize fulfillment near dense metro demand clusters
+
+Apply city-level targeting instead of national rollouts
+
+Expected Outcome
+
+Scale revenue with lower delivery risk + lower cost-to-serve
+
+🟢 Final Recommendations (Execution-Ready)
+
+1️⃣ Protect and retain high-frequency customers (>20 orders)
+2️⃣ Recover order frequency among medium-frequency users (6–20 orders)
+3️⃣ Reduce slow-delivery exposure before scaling volume growth
+4️⃣ Replace site-wide discounts with engagement-triggered pricing
+5️⃣ Concentrate growth initiatives in top metro revenue markets
+6️⃣ Monitor Beauty & Books categories for return-driven loss impact
+7️⃣ Maintain Electronics premium mix — do not dilute pricing
+8️⃣ Embed delivery-risk + return-risk tags into BI monitoring
+
+🧩 Closing Statement (Analyst Delivery)
+
+This project demonstrates an end-to-end analytics workflow integrating:
+
+SQL-based data engineering + validation
+
+Customer, product, revenue, logistics & geographic analytics
+
+Executive insight synthesis for business decision-making
+
+The resulting roadmap supports a shift from volume-driven expansion toward:
+
+Retention-led growth, operational risk control,
+and margin-preser
