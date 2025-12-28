@@ -190,133 +190,36 @@ This curated dataset supports both **SQL-based analytical workflows** and **Tabl
 <table width="90%" align="center">
 <tr><td>
 
-### **Data Architecture and ETL Workflow**
+### **Data Foundation & Analytical Dataset**
 
-This project follows a structured data-engineering workflow to ensure accuracy, reliability, and analytical readiness of the ecommerce dataset. The pipeline was designed using a **staging-to-production warehouse pattern**, with data validation checkpoints and referential-integrity controls.
+The dataset was prepared to support decision-focused ecommerce analysis, not just reporting.
+The final analytical model was structured into three validated tables:
 
-The end-to-end ETL workflow consists of the following stages:
+**Customers** — acquisition, activity, repeat-purchase behavior
 
----
+**Product Categories** — merchandise performance grouping
 
-#### **Step 1 — Source Data Preparation**
+**Sales Transactions** — revenue, order value, discounts, returns
 
-The original dataset was provided as a consolidated **Sales Master Excel file**.  
-From this file, three domain-specific extract files were created to support dimensional modeling:
+During preparation, the data was:
 
-- `dim_customer.csv`
-- `dim_product.csv`
-- `fact_sales.csv`
+- reviewed for gaps, duplicates, and structural inconsistencies
 
-Each CSV file contained only relevant attributes for its target table, ensuring clean separation of:
+- reconciled against financial totals to avoid misleading insights
 
-- customer attributes
-- product category attributes
-- transactional sales facts
+- standardized into analysis-ready fields (dates, categories, KPIs)
 
----
+-Only records that passed validation were promoted into the analytical layer.
 
-#### **Step 2 — Data Staging Layer (Raw Imports)**
+The result is a clean, reliable dataset designed to answer real business questions, including:
 
-A dedicated SQL schema (`stg`) was created to store raw imported files.
+- which products and markets drive revenue concentration
 
-Staging tables were created with `VARCHAR(MAX)` data types to allow safe ingestion of:
+- how customer retention and purchase frequency evolve over time
 
-- malformed values
-- inconsistent text formats
-- unexpected special characters
+- where operational risk appears in delivery, returns, or discounts
 
-The following staging tables were implemented:
-
-- `stg.stg_dim_customer`
-- `stg.stg_dim_product`
-- `stg.stg_fact_sales`
-
-Bulk load operations were performed using `BULK INSERT`, with error handling and logging through an `etl_error_log` table.
-
-This ensured:
-
-- repeatable loading
-- transparent failure tracking
-- UTF-8 file support
-
----
-
-#### **Step 3 — Data Quality & Validation Checks**
-
-Before transformation, multiple validation blocks were executed, including:
-
-- missing key detection (Order_ID, Customer_ID, Product_Category)
-- duplicate key identification
-- gender and loyalty tier distribution review
-- blank or null field checks
-- date parsing and invalid date detection
-- numeric field casting validation
-- negative and zero-value anomaly checks
-- revenue reconciliation totals
-
-Business-rule validation was also applied, including:
-
-- unit price × quantity − discount vs recorded total
-- checking rounding tolerances
-- confirming financial consistency across records
-
-This stage served as the **data reliability checkpoint** before promotion to production tables.
-
----
-
-#### **Step 4 — Production Data Model (Cleaned Tables)**
-
-After validation, data was transformed, standardized, and loaded into structured production tables:
-
-- `dbo.customers` (Customer Dimension)
-- `dbo.product_category` (Product Dimension)
-- `dbo.sales` (Sales Fact Table)
-
-Transformations included:
-
-- text trimming & normalization
-- `TRY_CAST` conversion to numeric and date types
-- blank → NULL conversions
-- boolean field normalization
-- automatic date hierarchy derivation (Year, Month, Quarter, etc.)
-
-Only **cleaned and validated rows** were inserted.
-
----
-
-#### **Step 5 — Referential Integrity & Warehouse Constraints**
-
-Foreign key relationships were enforced to maintain integrity:
-
-- `sales.Customer_ID` → `customers.Customer_ID`
-- `sales.Product_Category` → `product_category.Product_Category`
-
-This ensures:
-
-- no orphaned transaction records
-- consistent lookup relationships
-- trusted reporting outputs
-
-The final schema follows a **star-schema analytical design**, optimized for:
-
-- SQL analytical queries
-- business insight reporting
-- Tableau visualization
-
----
-
-#### **Step 6 — Analytics & Reporting Layer**
-
-The cleaned production tables were connected to:
-
-- **Tableau** → for interactive dashboards and insights
-- (optionally) Tableau → for visual exploration and validation
-
-All SQL-based analysis queries were executed on the **production fact & dimension tables**, not on staging data — ensuring high-quality analytical outputs.
-
----
-
- This workflow delivers a robust, auditable, and enterprise-style ETL process designed for **data accuracy, performance reliability, and scalable analytics.**
+This ensures that every insight in the project is evidence-based, decision-relevant, and defensible to stakeholders.
 
 </td></tr>
 </table>
