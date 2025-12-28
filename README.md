@@ -148,17 +148,6 @@ The analytical model consists of the following core datasets:
 - 5,000+ customers
 - **$281M+ total recorded revenue**
 
-The structured schema enables analysis across:
-
-- sales and revenue performance over time  
-- purchasing behavior and repeat frequency  
-- product and category profitability  
-- discount and pricing effectiveness  
-- delivery performance and logistics speed  
-- return-risk and operational loss exposure  
-
-This curated dataset supports both **SQL-based analytical workflows** and **Tableau interactive dashboards** for executive-level decision-making.
-
 </td></tr>
 </table>
 
