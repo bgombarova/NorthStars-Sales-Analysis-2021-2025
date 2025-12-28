@@ -16,28 +16,23 @@
 
 This project presents an end-to-end analytics study of a **US-based ecommerce company** operating in the consumer retail domain. The dataset contains multi-year transactional, customer, fulfillment, and behavioral records used to evaluate business performance across revenue trends, order volume, profitability, discount impact, returns, delivery performance, and customer engagement.
 
-The company serves a nationwide customer base and processes sales activity across multiple product categories and channels. The dataset includes approximately:
-
-- **50,00+ unique customers**
-- **220,000+ historical transactions**
-- **$281M+ in recorded sales revenue**
-- **Multiple sales and fulfillment channels**
-- **Delivery time, returns, discounting & behavioral attributes**
-
-A structured data engineering and analytics workflow was applied using:
-
-- **SQL Server** — data ingestion, staging, transformation, and analytical queries  
-- **Excel** — tabular validation, KPI summaries, and heatmap analysis  
-- **Tableau** — visual analytics and executive insight storytelling  
-
 The research focuses on deriving actionable insights across:
 
-- revenue and order performance trends  
-- product profitability and category contribution  
-- discount effectiveness and AOV impact  
-- return behavior and financial loss exposure  
-- delivery speed and logistics performance  
-- customer behavior, frequency, and retention risk  
+This project is designed around the core ecommerce questions that business stakeholders and leadership teams typically care about:
+
+**Revenue Growth & Demand Trends** — How sales volume and revenue evolve over time, and where growth or slowdown signals emerge
+
+**Category & Product Profitability** — Which product groups drive profit vs volume, and where margin leakage occurs
+
+**Customer Value & Retention Health** — Which customers generate repeat revenue, where churn risk appears, and how purchasing behavior shifts over time
+
+**Price Sensitivity & Discount Dependency** — How discounts influence conversion, order value, and long-term revenue quality
+
+**Returns & Financial Risk Exposure** — Which segments experience higher return rates and associated loss impact
+
+**Delivery Performance & Experience Risk** — Where slow delivery correlates with operational friction or customer risk pockets
+
+**Market & Geographic Concentration** — Which cities and states contribute most to revenue and profitability
 
 Insights from this study are intended to support business leaders and operational teams in strategic planning, commercial decision-making, and performance optimization across the ecommerce lifecycle.
 
