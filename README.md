@@ -102,7 +102,7 @@ The research objective is not only to describe what happened in the data, but to
 - optimize fulfillment and delivery experience
 
 - support sustainable revenue and profitability growth
-- 
+
 </td></tr>
 </table>
 
