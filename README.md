@@ -617,61 +617,40 @@ inventory routing or regional hub lag issues.
 
 ---
 
-### 🟡 Query 18 — Orders & Revenue Contribution by City & State
+- **Revenue leadership is highly concentrated in a few metro hubs.**
+New York City alone contributes **$72.86M** in revenue across **56.9K** orders, making it the single largest commercial market.
+Chicago **($38.14M)** and Los Angeles **($35.02M)** follow as secondary revenue centers, forming a Tier-1 urban performance cluster.
 
-**Purpose** — Identify high-revenue markets and regional demand concentration.
+- **California appears as a dual-engine revenue driver at the city level.**
+Los Angeles ($35.0M) and San Francisco ($21.15M) together generate $56M+ revenue, reinforcing California’s position as a strategic premium consumer market.
 
-**Business Question**
-Which cities and states generate the highest order volume and revenue contribution across the portfolio?
+- **Atlanta and Boston exhibit strong mid-market performance.**
+Despite lower order volumes vs Tier-1 cities, both deliver $21M–$30M revenue, indicating healthy demand density outside major population hubs.
 
-```sql
+- **Texas markets show balanced commercial strength rather than spiky concentration.**
+Dallas **($19.6M)** and Austin **($17.29M)** jointly contribute **$36.9M** revenue, suggesting distributed economic activity rather than single-city dominance.
 
-SELECT 
-    c.City,
-    c.State,
-    COUNT(*) AS orders,
-    SUM(s.Total_Amount) AS revenue
-FROM dbo.sales s
-JOIN dbo.customers c 
-    ON s.Customer_ID = c.Customer_ID
-GROUP BY c.City, c.State
-ORDER BY revenue DESC;
-```
+- **West-coast secondary markets demonstrate healthy profitability positioning.**
+Seattle generates **$13.84M** revenue across 10.9K orders, aligning with higher-value but moderate-volume urban spending patterns.
 
-Visualization — Geographic Revenue Distribution (State & City Level)
+- **State-level profitability leaders indicate operational & pricing advantages.**
+Massachusetts **(25.05%), Illinois (25.03%), and Texas (24.82%)** report the highest gross margin performance, suggesting
+— lower discount reliance,
+— stronger product mix, and
+— healthier cost-to-revenue leverage.
 
-<p align="center"> <img src="BI_Visuals/Orders%20%26%20Revenue%20Contribution%20by%20City%20%26%20State%20Detailed%20Visual.png" width="92%"> </p> 
-
-<p align="center"> <img src="BI_Visuals/Revenue%20Contribution%20by%20City.png" width="92%"> </p> 
-
+- **Lower-margin states still maintain strong revenue bases.**
+California (24.71%) and New York (24.75%) remain highly profitable despite volume intensity, meaning margin pressure is controlled and structurally resilient
 
 ---
 
-### 🟡 Query 19 — Profit Margin Performance by State
+**Revenue Contribution by City & State**
 
-**Purpose** — Assess geographic profitability and operating efficiency variation.
+<p align="center"> <img src="BI_Visuals/Revenue%20Contribution%20by%20City.png" width="92%"> </p> 
 
-**Business Question**
-Which states are highly profitable vs cost-intensive, based on gross profit margin contribution?
+---
 
-```sql
-
-SELECT 
-    c.State,
-    SUM(s.Gross_Profit) AS gross_profit,
-    SUM(s.Total_Amount) AS revenue,
-    CAST(
-        100.0 * SUM(s.Gross_Profit) / SUM(s.Total_Amount)
-        AS DECIMAL(6,2)
-    ) AS profit_margin_pct
-FROM dbo.sales s
-JOIN dbo.customers c 
-    ON s.Customer_ID = c.Customer_ID
-GROUP BY c.State
-ORDER BY profit_margin_pct DESC;
-```
-
-Visualization — State-Level Profitability Ranking
+**Profit Margin Performance by State**
 
 <p align="center"> <img src="BI_Visuals/Profit%20Margin%20Performance%20by%20State.png" width="92%"> </p>
 
@@ -679,30 +658,7 @@ Visualization — State-Level Profitability Ranking
 
 ### **Geographic Performance — Key Insights**
 
-**Revenue leadership is highly concentrated in a few metro hubs.**
-New York City alone contributes **$72.86M** in revenue across **56.9K** orders, making it the single largest commercial market.
-Chicago **($38.14M)** and Los Angeles **($35.02M)** follow as secondary revenue centers, forming a Tier-1 urban performance cluster.
 
-**California appears as a dual-engine revenue driver at the city level.**
-Los Angeles ($35.0M) and San Francisco ($21.15M) together generate $56M+ revenue, reinforcing California’s position as a strategic premium consumer market.
-
-**Atlanta and Boston exhibit strong mid-market performance.**
-Despite lower order volumes vs Tier-1 cities, both deliver $21M–$30M revenue, indicating healthy demand density outside major population hubs.
-
-**Texas markets show balanced commercial strength rather than spiky concentration.**
-Dallas **($19.6M)** and Austin **($17.29M)** jointly contribute **$36.9M** revenue, suggesting distributed economic activity rather than single-city dominance.
-
-**West-coast secondary markets demonstrate healthy profitability positioning.**
-Seattle generates **$13.84M** revenue across 10.9K orders, aligning with higher-value but moderate-volume urban spending patterns.
-
-**State-level profitability leaders indicate operational & pricing advantages.**
-Massachusetts **(25.05%), Illinois (25.03%), and Texas (24.82%)** report the highest gross margin performance, suggesting
-— lower discount reliance,
-— stronger product mix, and
-— healthier cost-to-revenue leverage.
-
-**Lower-margin states still maintain strong revenue bases.**
-California (24.71%) and New York (24.75%) remain highly profitable despite volume intensity, meaning margin pressure is controlled and structurally resilient
 
 </div>
 
