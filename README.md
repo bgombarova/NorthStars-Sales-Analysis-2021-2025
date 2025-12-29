@@ -611,7 +611,7 @@ inventory routing or regional hub lag issues.
 <table width="90%" align="center">
 <tr><td>
 
-### **Geographic Performance Insights**
+> ### **Geographic Performance Insights**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
  This section evaluates regional business performance using geography-level sales and profitability analytics.
@@ -647,7 +647,7 @@ California (24.71%) and New York (24.75%) remain highly profitable despite volum
 
 ---
 
-**Revenue Contribution by City & State**
+**Revenue Contribution by City**
 
 <p align="center"> <img src="BI_Visuals/Revenue%20Contribution%20by%20City.png" width="92%"> </p> 
 
@@ -677,17 +677,17 @@ California (24.71%) and New York (24.75%) remain highly profitable despite volum
 
 **1) Double-down growth programs in Tier-1 revenue hubs**
 
-- New York, Chicago, Los Angeles
+- New York, Chicago, Los Angeles:
  targeted retention + premium assortment expansion
 
 **2) Scale marketing + fulfillment investments in high-margin states**
 
-- Massachusetts, Illinois, Texas
+- Massachusetts, Illinois, Texas: 
  improve contribution without discount dependency
 
 **3) Run expansion pilots in strong mid-tier markets**
 
-- Atlanta, Boston, Seattle
+- Atlanta, Boston, Seattle :
  test regional assortment + logistics optimization
 
 **4) Monitor discount elasticity in California & New York**
