@@ -508,6 +508,9 @@ with 66% of all transactions occurring under discounts, confirming revenue relia
 
 ---
 
+<table width="90%" align="center">
+<tr><td>
+
 > ### **Delivery & CX Risk Analytics**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
@@ -521,115 +524,81 @@ customer experience, returns behavior, and satisfaction outcomes.
 
 ---
 
+### **Delivery & CX — Key Insights**
 
-### 🟡 Query 16 — Delivery Speed vs Returns (Logistics Risk)
+- **4–7 day delivery is the dominant fulfillment window**
+81,871 orders (~40% of total) sit in this SLA — indicating it is the operational baseline for most shipments.
 
-**Purpose** — Assess whether slower delivery speeds are associated with higher return likelihood.
+- **0–3 day “Express Delivery” carries ~32% of order volume**
+66,123 orders rely on fast-track fulfillment — implying higher logistics cost dependency.
 
-**Business Question**
-Do delayed shipments increase product return probability?
+- **8–15 day deliveries form the largest CX risk band**
+**34,122 (8–10 days)** + **25,668 (11–15 days)** →** 59,790** delayed orders **(~29%)**.
 
-```sql
+- 20+ day deliveries are small in volume but high-risk
+3,964 orders fall into critical delay territory — likely escalation / refund candidates.
 
-SELECT 
-    Delivery_Speed_Category,
-    COUNT(*) AS orders,
-    SUM(CASE WHEN Return_Flag = 1 THEN 1 ELSE 0 END) AS returns,
-    CAST(
-        100.0 * SUM(CASE WHEN Return_Flag = 1 THEN 1 ELSE 0 END) / COUNT(*)
-        AS DECIMAL(6,2)
-    ) AS return_rate_pct
-FROM dbo.sales
-GROUP BY Delivery_Speed_Category
-ORDER BY return_rate_pct DESC;
-```
+- **Slow delivery significantly increases return probability**
+Return rate = **6.82% (Slow)** vs ≈**2% (Fast/Medium)** →
+delivery latency is a stronger risk driver than product issues.
 
+- **Mid-tier shipping appears to be a systemic bottleneck**
+8–15 day segment concentration suggests
+inventory routing or regional hub lag issues.
 
-Visualization — Returns vs Delivery Speed
+**Return Rate % by Delivery Speed Category**
 
 <p align="center"> <img src="BI_Visuals/Delivery%20Speed%20vs%20Returns%20(Logistics%20Risk).png" width="92%"> </p>
 
 ---
 
-### 🟡 Query 17 — Delivery Fulfillment Speed Buckets (Operational Exposure)
-
-**Purpose** — To evaluate how order volume is distributed across delivery speed ranges, identify slow-fulfillment exposure, and highlight operational risk in orders taking more than 10 days to deliver.
-
-**Business Question**
-How many orders fall into each delivery time bucket, and what proportion of total orders are being fulfilled within acceptable delivery windows versus slow or delayed delivery windows?
-
-
-```sql
-
-WITH delivery_buckets AS (
-    SELECT 
-        CASE 
-            WHEN Delivery_Time_Days BETWEEN 0 AND 3 THEN '0–3 Days'
-            WHEN Delivery_Time_Days BETWEEN 4 AND 7 THEN '4–7 Days'
-            WHEN Delivery_Time_Days BETWEEN 8 AND 10 THEN '8–10 Days'
-            WHEN Delivery_Time_Days BETWEEN 11 AND 15 THEN '11–15 Days'
-            WHEN Delivery_Time_Days BETWEEN 16 AND 20 THEN '16–20 Days'
-            ELSE '20+ Days'
-        END AS delivery_bucket,
-        Customer_Rating,
-        Delivery_Time_Days
-    FROM dbo.sales
-)
-SELECT 
-    delivery_bucket,
-    COUNT(*) AS orders,
-    AVG(Customer_Rating) AS avg_rating,
-    AVG(Delivery_Time_Days) AS avg_delivery_days
-FROM delivery_buckets
-GROUP BY delivery_bucket
-ORDER BY 
-    CASE 
-        WHEN delivery_bucket = '0–3 Days' THEN 1
-        WHEN delivery_bucket = '4–7 Days' THEN 2
-        WHEN delivery_bucket = '8–10 Days' THEN 3
-        WHEN delivery_bucket = '11–15 Days' THEN 4
-        WHEN delivery_bucket = '16–20 Days' THEN 5
-        ELSE 6
-    END;
-
-```
-
-Visualization — Delivery Time vs Orders Volume
+**Delivery Volume Distribution Across Time Ranges**
 
 <p align="center"> <img src="BI_Visuals/Delivery%20Fulfillment%20Speed%20Buckets%20(Operational%20Exposure).png" width="92%"> </p>
 
 ---
 
-### **Delivery & CX — Key Insights**
+**Business Implications**
 
-**Order volume is concentrated in the 4–7 day delivery window**
-**81,871 orders (≈40% of total volume)** fall in this bucket, indicating this is the primary logistics SLA used across the network.
+- Delays beyond 8 days directly increase refund & churn risk
 
-**Ultra-fast (0–3 days) delivery accounts for 66,123 orders (~32%)**
-This suggests a strong dependency on express fulfillment capacity, which likely drives higher logistics cost exposure.
+- Express delivery volume indicates cost-intensive dependency
 
-**Deliveries exceeding 10 days form a visible long-tail risk segment**
-34,122 (8–10 days) + 25,668 (11–15 days) + 8,252 (16–20 days) + 3,964 (20+ days)
-→ **collectively 72,000+ delayed orders (~35% of total)**
-representing potential experience degradation & retention risk.
+- CX degradation is quietly accumulating in mid-tier shipping lanes
 
-**Slow deliveries show materially higher return probability**
-Return rate = 6.82% for Slow vs ≈2% for Fast & Medium
-confirming that delivery latency is a key CX failure driver, not product quality.
+**Recommended Actions**
 
-**Ratings remain flat across delivery buckets (avg = 3.0)**
-This implies customers do not immediately reflect delivery pain in ratings,
-reinforcing that returns & churn signals are stronger risk indicators than ratings.
+- **Prioritize shipping optimization for 8–15 day deliveries**
 
-**Most operational exposure sits between 8–15 days**
-59,790 orders in these buckets indicate a systemic mid-tier logistics bottleneck
-→ likely tied to regional routing or inventory transfer lag.
+reroute inventory through faster hubs
 
-**20+ day orders represent a critical escalation zone**
-3,964 cases constitute a CX incident-level segment requiring
-customer recovery workflows (refund credit / proactive outreach).
+review regional carrier performance
+
+improve inter-warehouse transfer timing
+
+- **Flag 20+ day orders for proactive recovery workflows**
+
+auto-refund credit / apology voucher
+
+CX outreach triggers
+
+- **Protect margins by reducing reliance on express shipping**
+
+shift eligible volume to 4–7 day SLA where possible
+
+- **Introduce delivery-time transparency in checkout**
+
+manage expectations
+
+reduce returns driven by delay frustration
+
+- **Build a delivery-delay risk alert KPI**
+
+monitor orders crossing 8-day threshold in near-real-time
 
 
+</td></tr>
+</table>
 
 </div>
 
