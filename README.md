@@ -570,33 +570,33 @@ inventory routing or regional hub lag issues.
 
 **Recommended Actions**
 
-- **Prioritize shipping optimization for 8–15 day deliveries**
+1 **Prioritize shipping optimization for 8–15 day deliveries**
 
-1) reroute inventory through faster hubs
+- reroute inventory through faster hubs
 
-2) review regional carrier performance
+- review regional carrier performance
 
-3) improve inter-warehouse transfer timing
+- improve inter-warehouse transfer timing
 
-- **Flag 20+ day orders for proactive recovery workflows**
+2 **Flag 20+ day orders for proactive recovery workflows**
 
-1) auto-refund credit / apology voucher
+- auto-refund credit / apology voucher
 
-2) CX outreach triggers
+- CX outreach triggers
 
-- **Protect margins by reducing reliance on express shipping**
+3 **Protect margins by reducing reliance on express shipping**
 
-1) shift eligible volume to 4–7 day SLA where possible
+- shift eligible volume to 4–7 day SLA where possible
 
-- **Introduce delivery-time transparency in checkout**
+4 **Introduce delivery-time transparency in checkout**
 
-1) manage expectations
+- manage expectations
 
-2) reduce returns driven by delay frustration
+- reduce returns driven by delay frustration
 
-- **Build a delivery-delay risk alert KPI**
+5 **Build a delivery-delay risk alert KPI**
 
-1) monitor orders crossing 8-day threshold in near-real-time
+- monitor orders crossing 8-day threshold in near-real-time
 
 
 </td></tr>
