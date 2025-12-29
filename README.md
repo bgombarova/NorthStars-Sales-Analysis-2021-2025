@@ -417,126 +417,89 @@ New-customer acquisition has slowed over time
 
 ---
 
+<table width="90%" align="center">
+<tr><td>
+
 > ###   **Product Performance & Profitability Analysis**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 This section analyzes product-level commercial performance, including profitability, discount dependency, and financial exposure from returns.
-Insights are derived using SQL queries and validated through Power BI visual analytics.
 
 ---
 
-### 🟡 Query 9 — Profitability by Product Category (Gross Profit & Margin%)
+**Key Findings** 
 
-**Purpose** — Identify high-margin and low-margin product categories.
+**Beauty delivers the highest margin performance (36.24%)**
+but also reports one of the **highest return rates (~13%+)**, suggesting premium pricing strength but higher post-purchase dissatisfaction risk.
 
-**Business Question** 
-Which product categories contribute most to gross profit and margin efficiency?
+**Sports is the strongest risk-adjusted performer**
+**High margin (30.96%)** + **low returns (~3–4%)** — indicating stable demand and efficient fulfillment economics.
 
-```sql
-SELECT 
-    p.Product_Category,
-    SUM(s.Gross_Profit) AS gross_profit,
-    SUM(s.Total_Amount) AS revenue,
-    CASE WHEN SUM(s.Total_Amount) = 0 THEN NULL
-         ELSE CAST(SUM(s.Gross_Profit) * 100.0 / SUM(s.Total_Amount) AS DECIMAL(6,2))
-    END AS profit_margin_pct
-FROM dbo.sales s
-JOIN dbo.product_category p 
-    ON s.Product_Category = p.Product_Category
-GROUP BY p.Product_Category
-ORDER BY profit_margin_pct DESC;
-```
+**Electronics drives the largest revenue (~$135M)**
+but** 66%** of orders are discount-driven, meaning performance is primarily promotion-sensitive rather than organic demand.
 
+**Books and Beauty carry disproportionate return losses (>13%**)
+significantly above the portfolio baseline **(~3–4%)**, implying potential issues in:
+product fit, expectation mismatch, or quality perception.
 
-Visualization — Gross Profit & Margin by Category
+**Food category shows weakest profitability (4.38% margin)**
+indicating high cost of goods, weak pricing power, or operational inefficiencies.
+
+**Fashion, Toys & Sports act as volume engines**
+high order throughput with stable and predictable return risk — supporting scale growth without major loss exposure.
+
+**Portfolio demand is highly price-elastic**
+with 66% of all transactions occurring under discounts, confirming revenue reliance on promotional levers.
+
+---
+
+ **Profit Margin % by Product Category**
 
 <p align="center"> <img src="BI_Visuals/Profitability%20by%20Product%20Category.png" width="92%"> </p>
 
-### 🟡 Query 10 — Discount Impact on Orders & Revenue
-
-**Purpose** — Measure dependency on discounted transactions.
-
-**Business Question** 
-Do discounted orders drive volume at the cost of AOV and profitability?
-
-```sql
-SELECT 
-  CASE WHEN Discount_Amount > 0 THEN 'Discounted' ELSE 'Non-Discounted' END AS bucket,
-  COUNT(*) AS orders,
-  SUM(Total_Amount) AS revenue,
-  AVG(Total_Amount) AS avg_order_value
-FROM dbo.sales
-GROUP BY CASE WHEN Discount_Amount > 0 THEN 'Discounted' ELSE 'Non-Discounted' END;
-```
-
-Visualization — Discounted vs Non-Discounted Order Performance
-
-<p align="center"> <img src="BI_Visuals/Discount%20Impact%20on%20Orders%20%26%20Revenue.png" width="92%"> </p>
-<p align="center"> <img src="BI_Visuals/Discount%20Impact%20on%20Orders%20%26%20Revenue%20Pie%20CHart%20Camparision.png" width="92%"> </p>
-
 ---
 
-### 🟡 Query 11 — Returns & Loss Impact — Product Category Level
-
-**Purpose** — Quantify financial leakage from returned orders.
-
-**Business Question** 
-What percentage of orders are returned and how much revenue is lost?
-
-```sql
-SELECT 
-    p.Product_Category,
-
-    COUNT(*) AS total_orders,
-
-    SUM(CASE WHEN s.Return_Flag = 1 THEN 1 ELSE 0 END) AS returns_count,
-
-    CAST(
-        100.0 * SUM(CASE WHEN s.Return_Flag = 1 THEN 1 ELSE 0 END) 
-        / COUNT(*)
-        AS DECIMAL(6,2)
-    ) AS return_rate_pct,
-
-    SUM(CASE WHEN s.Return_Flag = 1 THEN s.Total_Amount ELSE 0 END) AS return_value
-
-FROM dbo.sales s
-JOIN dbo.product_category p 
-    ON s.Product_Category = p.Product_Category
-
-GROUP BY p.Product_Category
-ORDER BY return_rate_pct DESC;
-
-```
-
-Visualization — Return Rate & Financial Loss Impact
+**Returns & Loss Impact — Category Level**
 
 <p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level.png" width="92%"> </p>
 <p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level%20Chart.png" width="92%"> </p>
 
 ---
 
-### **Product Performance — Key Insights**
+**Business Implications**
 
--Beauty is the most profitable category
-**Highest margin 36.24%, but also among the highest return exposure (13%+)** — indicates premium positioning but post-purchase dissatisfaction risk.
+- Margin strength is concentrated in a small set of premium categories (Beauty, Sports, Electronics)
 
--Sports delivers strong unit economics
-High profit margin **30.96% with low return rate (~3–4%)** — strongest risk-adjusted profitability contributor.
+- Loss risk is driven by high-return categories (Beauty, Books)
 
--Electronics is high-revenue but discount-dependent
-Margin **25.68% while 66%** of orders are discounted, meaning revenue strength is promotion-driven rather than organic demand.
+- Revenue growth is promotion-dependent rather than organically driven
 
--Food is the weakest financial performer
-Lowest margin 4.38% — signals price compression, high cost base, or operational inefficiency.
+- Lower-margin categories (Food) may be diluting overall profitability
 
--Returns are concentrated in Beauty & Books
-Both categories report >**13% return rate vs portfolio baseline (~3–4%)** — creates disproportionate refund and loss impact.
+- Sports emerges as a scalable “profitable growth” category
 
--Fashion, Toys & Sports act as volume engines
-High order throughput with stable return risk, supporting scale and transaction growth.
+- Electronics requires promotion planning rather than price cuts
 
--Demand is highly price-elastic
-66% of total orders are discount-led, confirming performance is promotion-sensitive across most categories.
+- Beauty requires post-purchase experience improvement rather than discounting
+
+  ---
+
+ **Recommendations**
+ 
+- Scale **Sports, Fashion & Toys — strong margins (20–31%)** and **low return risk (~3–4%)**; prioritize inventory allocation and campaign funding here.
+
+- Protect profits in **Electronics — 66%** of orders are discount-driven; reduce blanket discounts and shift to loyalty, bundles, and targeted promos.
+
+- Fix quality + expectation gaps in Beauty & Books — returns >13% causing refund losses; run root-cause review, improve product info, size/usage guidance, and post-purchase support.
+
+- Re-evaluate **Food category economics — weakest margin (4.38%)**; renegotiate supplier pricing or trim unprofitable SKUs.
+
+- Monitor price elasticity vs. margin erosion — track discount-to-profit ratio monthly to prevent promo-driven revenue dependence.
+
+- Allocate growth investment toward **high-margin, low-risk categories** while stabilizing return-sensitive product lines before scaling further.
+
+</td></tr>
+</table>
 
 </div>
 
