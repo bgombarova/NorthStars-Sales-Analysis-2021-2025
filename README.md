@@ -390,7 +390,7 @@ New-customer acquisition has slowed over time
 
 ---
 
-**Recommended Actions**
+**Recommended Business Actions**
 
 **Short-Term (Retention Focus)**
 
@@ -461,7 +461,6 @@ with 66% of all transactions occurring under discounts, confirming revenue relia
 
 **Returns & Loss Impact — Category Level**
 
-<p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level.png" width="92%"> </p>
 <p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level%20Chart.png" width="92%"> </p>
 
 ---
@@ -484,7 +483,7 @@ with 66% of all transactions occurring under discounts, confirming revenue relia
 
   ---
 
- **Recommendations**
+ **Recommended Business Actions**
  
 - Scale **Sports, Fashion & Toys — strong margins (20–31%)** and **low return risk (~3–4%)**; prioritize inventory allocation and campaign funding here.
 
