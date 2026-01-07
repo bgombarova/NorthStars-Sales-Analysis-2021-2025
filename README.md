@@ -39,11 +39,11 @@ NorthStar’s performance data shows that revenue movements across 2021–2025 a
 ---
 
 <p align="center">
-  <img src="BI_Visuals/Sales%20GROWTH%20KPI.png" width="92%">
+  <img src="BI_Visuals/Sales%20GROWTH%20KPI.png" width="98%">
 </p>
 
 <p align="center">
-  <img src="BI_Visuals/Sales%2C%20AOV%2C%20ORDERs%20Trend.png" width="92%">
+  <img src="BI_Visuals/Sales%2C%20AOV%2C%20ORDERs%20Trend.png" width="98%">
 </p
 
 </td></tr>
