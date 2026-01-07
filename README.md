@@ -25,7 +25,7 @@ NorthStar can benefit from strengthening **repeat-purchase and retention program
 > <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 
-> ### **Core Analysis 1 — Revenue, Orders & AOV Performance**
+> # **Core Analysis 1 — Revenue, Orders & AOV Performance**
 
 
 ---
