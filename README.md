@@ -1,13 +1,5 @@
-# Ecommerce Analytics Platform — SQL , ETL & BI Insights
+# NorthStar Retail — Revenue Slowdown, Order Volume Decline & Retention Risk Analysis (2021–2025
 ---
-<p>
-  <img src="https://img.shields.io/badge/SQL-Data%20Engineering-025E8C?style=for-the-badge&logo=postgresql" />
-  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-ETL%20%7C%20DW-CC2927?style=for-the-badge&logo=microsoftsqlserver" />
-  <img src="https://img.shields.io/badge/Power%20BI-Analytics%20%7C%20Dashboards-F2C811?style=for-the-badge&logo=powerbi" />
-  <img src="https://img.shields.io/badge/Tableau-Data%20Visualization-E97627?style=for-the-badge&logo=tableau" />
-  <img src="https://img.shields.io/badge/Excel-Data%20Cleaning%20%7C%20Modeling-217346?style=for-the-badge&logo=microsoftexcel" />
-  <img src="https://img.shields.io/badge/GitHub-Version%20Control-181717?style=for-the-badge&logo=github" />
-</p>
 
 <table width="90%" align="center">
 <tr><td>
