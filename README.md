@@ -1,4 +1,4 @@
-# NorthStar Retail — Revenue Slowdown, Order Volume Decline & Retention Risk Analysis (2021–2025
+# NorthStar Retail — Revenue Slowdown & Order Volume Decline (2021–2025)
 ---
 
 <table width="90%" align="center">
