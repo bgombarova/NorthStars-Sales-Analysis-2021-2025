@@ -30,7 +30,7 @@ NorthStar can benefit from strengthening **repeat-purchase and retention program
 
 ---
 
-###**Sales Trends and Growth Rates**
+### **Sales Trends and Growth Rates - Yearly**
 
 NorthStar’s performance data shows that revenue movements across 2021–2025 are closely tied to shifts in order volume rather than changes in spend per transaction. The revenue peak in 2023 coincides with the highest order activity of the period, followed by material declines in both measures through 2024–2025, while Average Order Value remains relatively stable with only minor year-to-year variation. This pattern indicates that recent performance changes are driven by fewer transactions occurring, rather than lower pricing, discounting pressure, or erosion in ticket size. From an operational perspective, this reinforces that revenue stability is currently dependent on sustaining purchasing frequency and overall demand volume, rather than on price optimization or AOV expansion.
 
