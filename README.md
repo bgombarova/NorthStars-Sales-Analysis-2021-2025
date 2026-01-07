@@ -88,79 +88,15 @@ Customer dynamics across 2021–2025 show a sharp decline in new customer acquis
 > ###   **Product Performance - Business Insights**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
-This section analyzes product-level commercial performance, including profitability, discount dependency, and financial exposure from returns.
+NorthStar’s product portfolio shows a high revenue concentration pattern, with Electronics accounting for 48% of total revenue, and the top three categories — Electronics, Home & Garden, and Sports — contributing over 80% of sales across 2021–2025. While order volumes are distributed relatively evenly across categories, Electronics generates disproportionately higher revenue, indicating dependence on a premium, high-value product mix rather than broad unit growth. As revenue declined through 2024–2025, the contraction was most pronounced within Electronics and other top categories, amplifying the overall slowdown due to limited diversification in lower-contributing segments. This concentration profile suggests increased exposure to demand volatility in core product lines, highlighting the need to strengthen portfolio balance through cross-selling, bundling, and adjacent category expansion.
 
 ---
 
-**Key Findings** 
-
-**Beauty delivers the highest margin performance (36.24%)**
-but also reports one of the **highest return rates (~13%+)**, suggesting premium pricing strength but higher post-purchase dissatisfaction risk.
-
-**Sports is the strongest risk-adjusted performer**
-**High margin (30.96%)** + **low returns (~3–4%)** — indicating stable demand and efficient fulfillment economics.
-
-**Electronics drives the largest revenue (~$135M)**
-but** 66%** of orders are discount-driven, meaning performance is primarily promotion-sensitive rather than organic demand.
-
-**Books and Beauty carry disproportionate return losses (>13%**)
-significantly above the portfolio baseline **(~3–4%)**, implying potential issues in:
-product fit, expectation mismatch, or quality perception.
-
-**Food category shows weakest profitability (4.38% margin)**
-indicating high cost of goods, weak pricing power, or operational inefficiencies.
-
-**Fashion, Toys & Sports act as volume engines**
-high order throughput with stable and predictable return risk — supporting scale growth without major loss exposure.
-
-**Portfolio demand is highly price-elastic**
-with 66% of all transactions occurring under discounts, confirming revenue reliance on promotional levers.
-
----
-
- **Profit Margin % by Product Category**
 
 <p align="center"> <img src="BI_Visuals/Profitability%20by%20Product%20Category.png" width="92%"> </p>
 
----
 
-**Returns & Loss Impact — Category Level**
 
-<p align="center"> <img src="BI_Visuals/Returns%20%26%20Loss%20Impact%20—%20Product%20Category%20Level%20Chart.png" width="92%"> </p>
-
----
-
-**Business Implications**
-
-- Margin strength is concentrated in a small set of premium categories (Beauty, Sports, Electronics)
-
-- Loss risk is driven by high-return categories (Beauty, Books)
-
-- Revenue growth is promotion-dependent rather than organically driven
-
-- Lower-margin categories (Food) may be diluting overall profitability
-
-- Sports emerges as a scalable “profitable growth” category
-
-- Electronics requires promotion planning rather than price cuts
-
-- Beauty requires post-purchase experience improvement rather than discounting
-
-  ---
-
- **Recommended Business Actions**
- 
-- Scale **Sports, Fashion & Toys — strong margins (20–31%)** and **low return risk (~3–4%)**; prioritize inventory allocation and campaign funding here.
-
-- Protect profits in **Electronics — 66%** of orders are discount-driven; reduce blanket discounts and shift to loyalty, bundles, and targeted promos.
-
-- Fix quality + expectation gaps in Beauty & Books — returns >13% causing refund losses; run root-cause review, improve product info, size/usage guidance, and post-purchase support.
-
-- Re-evaluate **Food category economics — weakest margin (4.38%)**; renegotiate supplier pricing or trim unprofitable SKUs.
-
-- Monitor price elasticity vs. margin erosion — track discount-to-profit ratio monthly to prevent promo-driven revenue dependence.
-
-- Allocate growth investment toward **high-margin, low-risk categories** while stabilizing return-sensitive product lines before scaling further.
 
 </td></tr>
 </table>
