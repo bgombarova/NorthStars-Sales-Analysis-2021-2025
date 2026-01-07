@@ -19,12 +19,13 @@ NorthStar can benefit from strengthening **repeat-purchase and retention program
 
 ---
 
-
+<table width="90%" align="center">
+<tr><td>
 
 > <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 
-> ## **Core Analysis 1 — Revenue, Orders & AOV Performance**
+> **Core Analysis 1 — Revenue, Orders & AOV Performance**
 
 
 ---
@@ -37,8 +38,6 @@ NorthStar’s performance data shows that revenue movements across 2021–2025 a
 
 ---
 
-**Sales Excutive KPI's**
-
 <p align="center">
   <img src="BI_Visuals/Sales%20GROWTH%20KPI.png" width="92%">
 </p>
@@ -46,6 +45,9 @@ NorthStar’s performance data shows that revenue movements across 2021–2025 a
 <p align="center">
   <img src="BI_Visuals/Sales%2C%20AOV%2C%20ORDERs%20Trend.png" width="92%">
 </p
+
+</td></tr>
+</table>
 
 ---
 
