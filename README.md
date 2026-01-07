@@ -24,31 +24,14 @@ NorthStar can benefit from strengthening **repeat-purchase and retention program
 > <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 
-> ### **Sales Performance — Business Insights**
+> ## **Core Analysis 1 — Revenue, Orders & AOV Performance**
 
-This section evaluates revenue trends, order volumes, and product contribution patterns to understand business growth dynamics and commercial performance drivers.
 
 ---
 
-**Key Findings**
+###**Sales Trends and Growth Rates**
 
--**Total recorded revenue is approximately $281.5M.**
-Revenue peaks in 2023, followed by a gradual decline in 2024–2025, indicating a post-growth normalization period.
-
--**Electronics is the largest revenue contributor (~$135M)**.
-It also has the highest AOV ($5K+), meaning the category is driven by fewer but higher-value premium transactions.
-
--**Sports, Fashion, and Books generate high order volume but lower AOV.**
-These categories act as volume drivers, contributing strongly to transaction count but moderately to revenue share.
-
--**Clear seasonal demand cycles are visible across multiple years.**
-Revenue spikes occur during mid-year and year-end periods, reflecting strong response to retail campaigns and promotions.
-
--**2025 indicates emerging demand slowdown signals.**
-Annual order volume declines from 56K (2023) → 46K (2024) → 33K (2025), suggesting reduced purchasing frequency and potential retention risk.
-
--**AOV remains stable (~$1.28K) despite falling volume.**
-This indicate drop in performance is volume-driven, rahter than caused by discount pressure or ticket-size erosion.
+NorthStar’s performance data shows that revenue movements across 2021–2025 are closely tied to shifts in order volume rather than changes in spend per transaction. The revenue peak in 2023 coincides with the highest order activity of the period, followed by material declines in both measures through 2024–2025, while Average Order Value remains relatively stable with only minor year-to-year variation. This pattern indicates that recent performance changes are driven by fewer transactions occurring, rather than lower pricing, discounting pressure, or erosion in ticket size. From an operational perspective, this reinforces that revenue stability is currently dependent on sustaining purchasing frequency and overall demand volume, rather than on price optimization or AOV expansion.
 
 
 
