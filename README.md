@@ -112,7 +112,7 @@ NorthStar’s product portfolio shows a high revenue concentration pattern, with
 <table width="90%" align="center">
 <tr><td>
 
- ### **Integrated Insight Summary — Revenue, Customers & Product Concentration**
+ ### **Revenue, Retention & Product Concentration Summary**
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
 Together, these analyses indicate that NorthStar’s revenue slowdown is primarily volume-driven, with performance increasingly constrained by weakening repeat-purchase activity and a high dependence on a small number of premium product categories. The business is currently sustained by a mature returning-customer base, while new-customer inflow remains minimal, concentrating revenue exposure within Electronics and other top product lines. This structural reliance on repeat demand and category concentration increases sensitivity to market fluctuations, making retention stability, purchase-frequency recovery, and portfolio diversification critical priorities going forward.
