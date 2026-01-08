@@ -1,7 +1,7 @@
 # NorthStar’s Sales Analysis 2021–2025
 ---
 
-> ## Table of Contents
+> ### Table of Contents
 > 
 > - [Executive Summary](#executive-summary)
 > - [Case Study Insights](#case-study-insights)
