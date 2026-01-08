@@ -1,6 +1,22 @@
 # NorthStar’s Sales Analysis 2021–2025
 ---
+<table width="90%" align="center">
+<tr><td>
+ 
+## Table of Contents
 
+- [Executive Summary](#executive-summary)
+- [Case Study Insights](#case-study-insights)
+  - [Sales Trends and Growth Rates](#sales-trends-and-growth-rates)
+  - [Customer Growth vs Retention](#customer-growth-vs-retention)
+  - [Product Performance & Revenue Concentration](#product-performance--revenue-concentration)
+- [Insights Summary](#insights-summary)
+- [Final Executive Recommendations](#final-executive-recommendations)
+
+</td></tr>
+</table>
+
+---
 <table width="90%" align="center">
 <tr><td>
 
