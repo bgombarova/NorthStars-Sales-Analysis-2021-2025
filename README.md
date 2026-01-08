@@ -2,7 +2,6 @@
 
 
 **Table of Contents**
---- 
 > 
 > - [Executive Summary](#executive-summary)
 > - [Case Study Insights](#case-study-insights)
