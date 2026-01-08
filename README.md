@@ -131,13 +131,13 @@ Together, these analyses indicate that NorthStar’s revenue slowdown is primari
 ### 1. Prioritize Retention to Stabilize Order Volume
 With revenue declines driven by reduced order activity and minimal new-customer inflow, leadership should focus on protecting and reactivating the returning-customer base. Improving repeat purchase frequency is the fastest lever to stabilize topline performance in the near term.
 
-**2. Rebuild New-Customer Acquisition in a Controlled Manner**
+### 2. Rebuild New-Customer Acquisition in a Controlled Manner
 Near-zero net-new customer growth since 2023 increases long-term revenue risk. Targeted acquisition efforts should be reintroduced selectively to restore a sustainable inflow without over-reliance on discount-led growth.
 
-**3. Reduce Revenue Dependence on a Narrow Product Portfolio**
+### 3. Reduce Revenue Dependence on a Narrow Product Portfolio
 Electronics and a small number of categories account for the majority of revenue, amplifying downside risk during demand slowdowns. Expanding cross-category purchasing and strengthening adjacent product lines can improve portfolio resilience.
 
-**4. Shift Growth Focus from AOV to Purchase Frequency**
+### 4. Shift Growth Focus from AOV to Purchase Frequency
 With AOV remaining stable, future growth will depend more on increasing transaction frequency rather than basket size. Engagement and reactivation strategies should prioritize frequency over pricing or discount expansion.
 
 
