@@ -52,7 +52,6 @@ NorthStar’s performance data shows that revenue movements across 2021–2025 a
 
 <div style="border:1px solid #d9d9d9; border-radius:6px; padding:16px; background:#fafafa;">
 
----
 
 <table width="90%" align="center">
 <tr><td>
