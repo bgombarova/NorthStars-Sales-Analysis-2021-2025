@@ -4,7 +4,7 @@
 <table width="90%" align="center">
 <tr><td>
 
-### **Executive Summary**
+# Executive Summary
 
 **NorthStar Retail Inc.’s** multi-year ecommerce analysis across **2021–2025** shows total recorded revenue of **$281M**, with performance peaking in 2023 before entering a volume-driven slowdown through **2024–2025**. Orders decline from **56K to 33K** over the period, while Average Order Value remains stable at approximately $1.28K, indicating that the downturn is driven by weaker purchasing frequency rather than pricing or discount pressure.
 
